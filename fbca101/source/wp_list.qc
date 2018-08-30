@@ -1,0 +1,106 @@
+
+
+
+
+
+
+void() Sprintmaps =
+{
+	sprint_fb(self, 2, "συπποςτεδ ναπσ:\n");
+	sprint_fb(self, 2, "       a2       dsn      lock    rpdm10\n");
+	sprint_fb(self, 2, " aerowalk     duel1     magus    rpgdm1\n");
+	sprint_fb(self, 2, "   agenda      e1m1 maricsq1_1    rtldm3\n");
+	sprint_fb(self, 2, "    agent      e1m2 maricsq1_2     ruins\n");
+	sprint_fb(self, 2, " aggressr      e1m3    matdm1     rwild\n");
+	sprint_fb(self, 2, "    airar      e1m5    matdm2     safe1\n");
+	sprint_fb(self, 2, "  alcyone  e1m5duel    mayhem     safe2\n");
+	sprint_fb(self, 2, "  alk08dm      e1m6     messy    sanity\n");
+	sprint_fb(self, 2, "    amphi      e1m7   midair3   santzue\n");
+	sprint_fb(self, 2, "   amphi2      e2m1      mine  scampdm5\n");
+	sprint_fb(self, 2, "  androm9      e2m2   misdm10   schloss\n");
+	sprint_fb(self, 2, " argonaut   e2m2tdm  misdm11a   shadows\n");
+	sprint_fb(self, 2, "   auhdm1      e2m5   misdm12 shadowsb7\n");
+	sprint_fb(self, 2, "   auhdm2      e3m2   misdm13     shady\n");
+	sprint_fb(self, 2, "     b256   e3m7tdm    misdm6     shake\n");
+	sprint_fb(self, 2, "      b2s       edc    misdm8     shine\n");
+	sprint_fb(self, 2, "  badwalk     efdm1    misdm9    shroud\n");
+	sprint_fb(self, 2, "   baldm2    efdm10  mjdm1pro   shroud2\n");
+	sprint_fb(self, 2, "   baldm3    efdm11    muny16   silence\n");
+	sprint_fb(self, 2, "   baldm4    efdm12    naked3     skull\n");
+	sprint_fb(self, 2, "   baldm5    efdm13    naked4   skywalk\n");
+	sprint_fb(self, 2, "   baldm6     efdm2    naked5      slip\n");
+	sprint_fb(self, 2, "   baldm7     efdm3    naked6        sm\n");
+	sprint_fb(self, 2, "   baldm8     efdm4  naked7b2  sm30_ray\n");
+	sprint_fb(self, 2, "   battle     efdm5     nduel    spank1\n");
+	sprint_fb(self, 2, "    bless     efdm6    nindm2       spd\n");
+	sprint_fb(self, 2, "  blessed     efdm7    nindm3     spear\n");
+	sprint_fb(self, 2, "   blizz2     efdm8  nindm3v2     spine\n");
+	sprint_fb(self, 2, "   bovine     efdm9    njx9dm   spinev2\n");
+	sprint_fb(self, 2, "    br11m    effigy   noentry     start\n");
+	sprint_fb(self, 2, "    br13m  egyptele      odd1  strafin1\n");
+	sprint_fb(self, 2, "    br18m     elbow      odd2  strafin2\n");
+	sprint_fb(self, 2, "    br20m       end   oktest1  strafin3\n");
+	sprint_fb(self, 2, "    br21m   enraged   oldcrat  strafin4\n");
+	sprint_fb(self, 2, "   br21ma     eodm3  oldcrat2  strafin5\n");
+	sprint_fb(self, 2, "    bsdm6     evdm1       oma  strafin6\n");
+	sprint_fb(self, 2, "    bsdm7     exdm2       omf  strmland\n");
+	sprint_fb(self, 2, "    bsdm8     exdm3   opposit    sudden\n");
+	sprint_fb(self, 2, "      bsp     exdm4   outpost    summer\n");
+	sprint_fb(self, 2, "  carddm2     fbdm2       p3a    swtdie\n");
+	sprint_fb(self, 2, "cathexis_vis    fbe3m7    pbrdm2     tbase\n");
+	sprint_fb(self, 2, "   cbadm1    ferrum      pen2   tearena\n");
+	sprint_fb(self, 2, "   cbadm2    filthy    pidmm5  teritory\n");
+	sprint_fb(self, 2, " cbadm2v2       fmc   pinion1    theend\n");
+	sprint_fb(self, 2, "   cbadm3      four   pinion2       thf\n");
+	sprint_fb(self, 2, "  chesdm1      frag   pinion3  timeless\n");
+	sprint_fb(self, 2, "  cleaver  fragtwn1  pipeline    titan2\n");
+	sprint_fb(self, 2, "    cmt1b  fribdev1     pkeg1 trallefinal\n");
+	sprint_fb(self, 2, "     cmt3  fribweb1     pkeg2    trdmm4\n");
+	sprint_fb(self, 2, "     cmt4  frobodm1   pldm1ex   trindm1\n");
+	sprint_fb(self, 2, "    cmt5b  frobodm2       pli   trindm2\n");
+	sprint_fb(self, 2, "  condemn  frobodm5    plpak1   trindm3\n");
+	sprint_fb(self, 2, "   cpm1qw  frontier   plpak10   trondm1\n");
+	sprint_fb(self, 2, "   cpm3qw  gencldm6   plpak11   trondm2\n");
+	sprint_fb(self, 2, "    crdm2    gendm2   plpak12       tsd\n");
+	sprint_fb(self, 2, "   dakdm1  genocide    plpak2   tumour2\n");
+	sprint_fb(self, 2, "   dakdm2    geodm1    plpak3   uarena1\n");
+	sprint_fb(self, 2, "  damaul7    gomdm2    plpak4   ukcldm2\n");
+	sprint_fb(self, 2, "   dapak1  gomdm2v2    plpak5   ukcldm6\n");
+	sprint_fb(self, 2, "  dapak10    gomdm3    plpak6  ukooldm2\n");
+	sprint_fb(self, 2, "  dapak11    gomdm4    plpak7  ukooldm3\n");
+	sprint_fb(self, 2, "  dapak12    gomdm5    plpak8  ukooldm4\n");
+	sprint_fb(self, 2, "   dapak2    gomdm6    plpak9  ukooldm6\n");
+	sprint_fb(self, 2, "   dapak3      grim     pope2  ukooldm8\n");
+	sprint_fb(self, 2, "   dapak4      hate     pope3    ukpak1\n");
+	sprint_fb(self, 2, "   dapak5    hill20     pope4    ukpak2\n");
+	sprint_fb(self, 2, "   dapak6  icearena     pope6    ukpak5\n");
+	sprint_fb(self, 2, "   dapak7       id3   povdmm4    ukpak6\n");
+	sprint_fb(self, 2, "   dapak9   ikdm9q1   primedm    ukpak8\n");
+	sprint_fb(self, 2, "darkthree   imp1dm5    prodm4    ultrav\n");
+	sprint_fb(self, 2, "     dead   imp1dm6  pushdmm4    unddm1\n");
+	sprint_fb(self, 2, "  debello    impdm2  q1_q2dm1    unddm2\n");
+	sprint_fb(self, 2, "     del1    impdm3   q1arena  utressor\n");
+	sprint_fb(self, 2, "      dm1  inerb18b  q1arenax      vdm2\n");
+	sprint_fb(self, 2, "     dm1a    infect   q1base1      vdm3\n");
+	sprint_fb(self, 2, "  dm2dmm4  insomnia    q1edge  vendetta\n");
+	sprint_fb(self, 2, "      dm3     jadm1 q1tm_speedy   vision1\n");
+	sprint_fb(self, 2, "  dm3hill     jndm6     q2dm7   warfare\n");
+	sprint_fb(self, 2, "   dm3ish     jrdm1   q3dm6qw  warfare2\n");
+	sprint_fb(self, 2, "      dm4     jrdm2   qffldm5  warfare3\n");
+	sprint_fb(self, 2, "   dm4ish   jvoxdm2     qtdm1  wildtest\n");
+	sprint_fb(self, 2, "      dm5      jvx1 qtourney2    xl1dm1\n");
+	sprint_fb(self, 2, "     dm5a      kdmw  quadrock    xl1dm2\n");
+	sprint_fb(self, 2, "      dm6    kikdm3   ranbase    xl1dm3\n");
+	sprint_fb(self, 2, "  dm6dmm4    kikdm6  rapture1    xl1dm4\n");
+	sprint_fb(self, 2, "  dm6quad   kingdom  rapture2    xl1dm5\n");
+	sprint_fb(self, 2, "      dm7    kjdm12   rarena3    xl1dm6\n");
+	sprint_fb(self, 2, "    dm99a    kjdm13    ravage    xl1dm7\n");
+	sprint_fb(self, 2, "   dmfdm2 klzinsanity   ravage2    ztndm1\n");
+	sprint_fb(self, 2, "   dmm4_1    klzvob     razzi    ztndm2\n");
+	sprint_fb(self, 2, "   dmm4_3   kz1on1a     rev68    ztndm3\n");
+	sprint_fb(self, 2, "      dp6   lacrima       rf2    ztndm4\n");
+	sprint_fb(self, 2, " dranzdm6      lady   rgarden    ztndm5\n");
+	sprint_fb(self, 2, " dranzdm7     leaks       rip    ztndm6\n");
+	sprint_fb(self, 2, " dranzdm8    lilith    ritual          \n");
+};
+

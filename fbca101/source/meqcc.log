@@ -1,0 +1,76 @@
+MrElusive's QuakeC compiler v1.4, Oct 29 1999 11:59:34
+This compiler is not supported by id Software.
+meqcc -help for info.
+
+output file: ../qwprogs.dat
+defs.qc
+defs2.qc
+arena.qc
+load.qc
+subs.qc
+combat.qc
+items.qc
+maps.qc
+observ.qc
+weapons.qc
+world.qc
+motd.qc
+client.qc
+player.qc
+doors.qc
+buttons.qc
+triggers.qc
+plats.qc
+misc.qc
+server.qc
+lists.qc
+bot/botjump.qc
+bot/botutil.qc
+bot/botphys.qc
+bot/bothazd.qc
+bot/bothelp.qc
+bot/botgoals.qc
+bot/botenemy.qc
+bot/botstat.qc
+bot/botweap.qc
+bot/botpath.qc
+bot/botwater.qc
+bot/botthink.qc
+marker_util.qc
+route_calc.qc
+route_lookup.qc
+marker_load.qc
+route_fields.qc
+names.qc
+talk.qc
+commands.qc
+bot/botimp.qc
+match.qc
+maps/map_dm3.qc
+maps/map_dm4.qc
+maps/map_dm6.qc
+maps/map_ztndm3.qc
+maps/map_e1m2.qc
+maps/map_aerowalk.qc
+maps/map_ruins.qc
+maps/map_ultrav.qc
+maps/map_frobodm2.qc
+maps/map_dm2dmm4.qc
+maps/map_povdmm4.qc
+maps/map_cmt3.qc
+maps/map_skull.qc
+maps/map_vdm2.qc
+loadmap.qc
+compilation time was 0.44 seconds
+-------------------------------------------------
+strofs        = 119056, max = 500000
+numstatements =  58345, max = 200000
+numfunctions  =   1186, max = 16384
+numglobaldefs =   7187, max = 100000
+numfielddefs  =    907, max = 2024
+numpr_globals =  32573, max = 32768
+nummodels     =     55, max = 1024
+numsounds     =    140, max = 1024
+numfiles      =      0, max = 1024
+total size    = 823616
+-------------------------------------------------

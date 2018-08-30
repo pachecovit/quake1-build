@@ -1,0 +1,83 @@
+FrikBot MidAir (The project is closed)
+======================================
+Title		: FrikBot MidAir (fbma)
+Version	: 1.02
+Date		: Nov 13, 2003
+Author	: ParboiL
+Email		: parboil@quakeworld.ru
+Download	: http://www.parboil.quakeworld.ru
+
+
+Description
+===========
+A Quake mod that combines the FrikBot with Kombat Teams (KTPro MidAir).
+
+
+Installation
+============
+Create a folder fbma and Unzip into fbma folder.
+Create a bat file:
+--------- 
+@echo off
+cd..
+qwsv.exe +gamedir fbma
+--------- 
+Then start qwcl.exe and incorporate to local server.
+For game I recommend to use zquake.exe or fuhquake.exe.
+Then write so:
+--------- 
+@echo off
+cd..
+(zquake or fuhquake).exe +gamedir fbma
+--------- 
+
+
+Important Notes
+===============
+Refer files in a folder doc for more information about FrikBot and KombatTeams.
+If after death of the bot his model model is invisible use "localinfo proxy 1"!
+
+
+New commands
+===============
+addbot	: add bot
+removebot	: remove bot
+mid_air	: midair mode
+skillup	: skill + 1
+skilldown	: skill - 1
+
+
+What's new in this version
+==========================
+- Is added variable proxy (for mqwcl & qizmo: invisible model bot after death)
+- The bug in FrikBot is corrected (mqwcl: player model vanished after death) 
+- The command removebot is added 
+- The command addbot is added 
+- The command skilldown is added 
+- The command skillup is added 
+- The function BotPing is added
+- The function BotBreak is added
+- The function BotReady is added 
+- The bug in FrikBot is corrected (there was a player model after removal)
+- The statistics KTPro (MidAir) is added
+- The mode MidAir is added 
+- Are combined FrikBot with KombatTeams
+
+Known bugs:
+===========
+The model of the bot flickers if localinfo proxy 1
+
+
+Special thanks
+==============
+Kombat Teams:
+kemiKal (kemikal@kemikal.com)
+cenobite (cenobite@barrysworld.com)
+sturm (silicon@inf.bme.hu)
+fang (tjp@cc.jyu.fi)
+
+FrikBot:
+Ryan "FrikaC" Smith (frika-c@earthling.net)
+
+KTPro:
+rxr (www.ktpro.n3.net)

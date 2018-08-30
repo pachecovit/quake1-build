@@ -1,0 +1,10 @@
+To enable downloading from servers (demos, maps) you will need to do two things:
+
+
+1) softlink to your server ID1 directory (ie. ln -s /home/myuser/ktxserver/ID1 ID1)
+
+2) softlink to your server demos directory (ie. ln -s /home/myuser/ktxserver/demos demos)
+
+
+In the QTV main directory. This will allow players to download recorded demos
+and maps that are on the server as long as the server is configured properly.

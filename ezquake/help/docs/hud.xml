@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/document.xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/document.xsd">
+	<head>
+		<title>ezQuake HUD CONFIGURATION</title>
+		<date>2004-11-22</date>
+	</head>
+	<body>
+		<h align="center">ezQuake HUD CONFIGURATION</h>
+		<hr />
+		<br />
+		<h>What is a HUD element?</h>
+		<p>Hud element is a single 2D element, that can be drawn on-screen, moved to different positions, aligned etc.. Most of HUD elements also have ability to display frame beneath themselves (background).</p>
+		<p>HUD element have a name, which is a string, like "netgraph", "fps" etc.. You use that name in HUD commands, like "show netgraph". Given HUD element remembers its all settings (its properties) as variables, which are named</p>
+		<p>hud_'hud_name'_'property_name'
+			<pre>
+				examples:
+				hud_netgraph_frame
+					hud_ping_period
+				
+				etc..
+			</pre>
+		</p>
+		<p>Changing property is simple. As you can easily guess, simple way to do this is changing the variable. There is more convinient way however. Try typing element name at console, like this:</p>
+		<p>
+			<pre>    netgraph 'enter' </pre>
+		</p>
+		<p>You will see some infos about netgraph and list of its properties with its current values. If you want to change some - it's easy:</p>
+		<p>
+    		<pre>
+				netgraph frame 0    // disable background
+		   		netgraph show  0    // same as hide netgraph
+			</pre>
+		</p>
+		<p>This is a preferred way, however there is no TAB completion for properties now - coming soon..</p>
+		<p>Some properties (like "show") are controlled by commands (like "show" and "hide"). Some of them (those for setting element position) will not have effect, if you change them directly by vars. If you do so, try "hud_recalculate" command.</p>
+		<h>Showing and hiding</h>
+		<p>To show given HUD element, use show command givind element name as a parameter. Giving no parameters will display a list of all HUD elements with its current status. There is a special parameter - "all" - which you can use to show all elements. Examples:</p>
+		<p>
+			<pre>
+				show netgraph   // shows netgraph
+				show fps        // show fps counter
+				show            // list HUD elements
+				show all        // shows all hud elements
+			</pre>
+		</p>
+		<p>For opposite - there's a "hide" commands, which should be self-explanatory.</p>
+		<p>Current status in rememberd as a "show" property, so typing</p>
+		<p>
+			<pre>
+				show netgraph
+			</pre>
+		</p>
+		<p>will have a similar effect as typing</p>
+		<p>
+			<pre>
+   				netgraph show 1
+			</pre>
+		</p>
+		<h>Let's move them</h>
+		<p>When you want to move given HUD element, firstly you have to decide what screen area it occupies. Use command:</p>
+		<p>
+			<pre>
+			place 'element-name' 'where-to-place'
+			</pre>
+		</p>
+		<p>And possible places are:</p>
+			<pre>
+				"screen"    - screen,
+				"view"      - view area (depends on viewsize var),
+				"top"       - area above status bar,
+				"sbar"      - sbar area (health bar + inventory bar, no free space after sbar, if you play at higher res)
+				"ibar"      - inventory bar (upper part of sbar),
+				"hbar"      - health bar (lower part of sbar),
+				"sfree"     - free area after status bar (if res > 320 or hud_sbar_size changed),
+				"ifree"     - free area after inventory bar,
+				"hfree"     - free area after health bar,
+			</pre>
+		<p>Some examples:</p>
+		<p>
+			<pre>
+				place netgraph screen
+				place fps top
+				place health hfree
+			</pre>
+		</p>
+		<p>If you have a place for your favourite element, align it to some edges. Command is, obviously, "align". Syntax:</p>
+		<p>
+			<pre>
+				align 'element-name' 'X-alignment' 'Y-alignment'
+			</pre>
+		</p>
+		<p>X-alignment can be:</p>
+    	<p>
+			<pre>
+				"left"      - left edge of area chosen by "place",
+				"center"    - center,
+				"right"     - right area,
+				"before"    - explained later..
+				"after"     - explained later..
+			</pre>
+		</p>
+		<p>Y-alignment can be:</p>
+		<p>
+			<pre>
+				"top"       - top edge,
+				"center"    - center,
+				"bottom"    - bottom :)
+				"console"   - below console (like clock by default)
+				"before", "after" - explained later..
+			</pre>
+		</p>
+		<p>Example:</p>
+		<p>
+			<pre>
+				align netgraph left top     // left upper corner
+				align fps right bottom      // right lower corner
+			</pre>
+		</p>
+		<p>Finally, if element position still does not match your preferences, you can fine-tune it with "move" command. Syntax is:</p>
+		<p>
+			<pre>
+				move 'element_name' 'X-offset' 'Y-offset'
+			</pre>
+		</p>
+		<p>Offsets can be either negative or positive. Positive X offset moves element to the right, and positive Y-offset moves element to the bottom. Exaples:</p>
+		<p>
+			<pre>
+				move netgraph 2 2   // move 2 pixels right and 2 pixels down
+				move fps -10 5      // 10 pixels left, 5 pixels bottom
+			</pre>
+		</p>
+		<p>Note, that your element will not be drawn, if you locate it off the screen, even partially.</p>
+		<p>All those commands - place, align, move - can be used without parameters (print help then) or with on parameter - HUD element name. Then current values are printed.</p>
+		<h>Add/remove frame</h>
+		<p>Frame is a regular property, it differs a little because every HUD element can have a frame. Values for frame property are:</p>
+		<p>
+			<pre>
+		    0 - no frame
+			1 - black frame
+			(0..1) - transparent frame, lower number means more transparency,
+			2 - a box like that for netgraph.
+			</pre>
+		</p>
+		<p>Examples:</p>
+		<p>
+			<pre>
+				net frame 2         // add nice frame for network statistics
+				netgraph frame 0    // make netgraph more useful
+				fps frame 0.6       // make fps more readable
+			</pre>
+		</p>
+		<h>Relative positioning</h>
+		<p>You can align some elements relative to other elements. Firstly you have decide, if you element, which you are locating now (element B) is to be inside another element (element A) or outside it.</p>
+		<p>If outside, do:</p>
+		<p>
+			<pre>
+				place A B
+			</pre>
+		</p>
+		<p>if inside, do:</p>
+		<p>
+			<pre>
+				place A @B
+			</pre>
+		</p>
+		<p>examples:</p>
+			<p>
+				<pre>
+					place fps @net
+					place health face
+					place iammo health
+					place ammo iammo
+				</pre>
+			</p>
+		<p>Then yu have to align it. If you want to place it outside, you have some additional alignments - before and after.</p>
+		<p>Examples:</p>
+			<p>
+				<pre>
+					place health after top
+					plce iammo after top
+					place ammo after top
+				</pre>
+			</p>
+		<p>and you have a nice chain combined of healht, armor and it's icons.</p>
+		<p>You can ask what is the difference between inside and outside placing.. You can eaily see it if you add frame to your elements, that enlarge them (like frame 2).</p>
+		<h>HUD elements</h>
+		<p>Currently list of HUD elements contains few elements for occasional use (like netgraph), many elements taken from your status bar (reorganize your screen with them) and additional "group" objects, which display nothing (except frame if enabled) and can be used for groupping some objects together (like ammo counts).</p>
+		<p>Full list is:</p>
+		<p>
+			<pre>
+				fps         - fps counter
+				net         - net statistics
+				ping        - small net statistics,
+				netgraph    - everything about net,
+				clock       - clock
+			
+				iarmor      - armor icon
+				armor       - armor level
+				face        - player face
+				health      - health level
+				iammo       - current ammo icon
+				iammo1      - shells icon
+				iammo2      - nails icon
+				iammo3      - rockets icon
+				iammo4      - cells icon
+				ammo        - current ammo value
+				ammo1       - number of shells
+				ammo2       - number of nails
+				ammo3       - number of rockets
+				ammo4       - number of cells
+				gun         - current weapon icon
+				gun2        - shotgun icon
+				gun3        - super shotgun icon
+				...
+				sigil1      - sigil 1 icon (rune)
+				sigil2      - sigil 2 icon
+				...
+				key1        - silver key
+				key2        - gold key
+				suit        - suit icon
+				quad        - quad icon
+				pent        - pentagram icon
+				ring        - ring icon
+							
+				group1      - groupping object
+				...
+				group5      - ...
+			</pre>
+		</p>
+		<p>Every element has its own properties. You can check them, by simply typing element name in console. Some common properties are described below, which affect you inventory elements - guns, health etc..</p>
+		<p>
+			<pre>
+				style - this always change the look of the element, styles are
+					different, depending on element type; usually there is one style
+					which, if enabled, enables text-mode look of element (like gun6
+					is "gl", health level with small text etc.). Style values are
+					cardinal numbers (0, 1, ...)
+			
+				scale - mostly for GL users (currently it doesn't work in SOFT) - lets
+					you change size of element - make health 2 times bigger etc..
+					With scale you can make a HUD that look like in 320x200 (big numbers),
+					and still have -width 640 without conwidth, so your console holds more
+					text
+			
+				wide - only used with "gun" and "gun8" and affects style of lightning gun
+					icon,
+			
+				align - used for numbers (health, armor etc..) and specify, how they should
+					be aligned,
+			
+				digits - used for numbers and specify how many digits they should display,
+					for example to save space, you can have your ammo printed only with
+					two digits, it will always show 99 if is more than 100
+			</pre>
+		</p>
+		<p>Groupping elements have only two properties - width and height - they should be self-explanatory.</p>
+	</body>
+</document>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/variable.xsl"?>
+<variable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/variable.xsd">
+
+<name>con_highlight_mark</name>
+<description>Defines a special marker used for highlighting the text that includes your nickname.</description>
+<value></value>
+<remarks>
+Works only with /con_highlight 2 or /con_hightlight 3
+</remarks>
+</variable>

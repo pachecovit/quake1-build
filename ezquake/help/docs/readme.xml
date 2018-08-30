@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/document.xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/document.xsd">
+	<head>
+		<title>ezQuake &quot;Read Me&quot;</title>
+		<date>2004-12-01</date>
+	</head>
+	<body>
+		<hr />
+		<color>Where to get the secutiry module for Windows or Linux?</color>
+		<p><a href="http://ezQuake.SourceForge.net/security/">http://ezQuake.SourceForge.net/security/</a></p>
+		<color>Why were the modules not included in the package (they are just 200 kB!)?</color>
+		<p>The security modules are closed-source libraries. Therefore they cannot be published on SourceForge.net where we host our binaries and sources.</p>
+		<hr />
+		<color>Where did commands and variables description go?</color>
+		<p>A new command has been created (/describe) that allows you to check out any command or variable you wish. Try /describe ignore for an example.</p>
+		<p>You can find the reference online (the ability to browse) here: <a href="http://ezQuake.SourceForge.net/docs/">http://ezQuake.SourceForge.net/docs/</a></p>
+		<hr />
+		<h>CREDITS</h>
+		<p>Based on FuhQuake 0.31 by A Nourai (Fuh), which was based on ZQuake by Anton Gavrilov (Tonik), which was based on QuakeWorld by id Software. FuhQuake 0.31 credits apply.</p>
+			<p><a href="http://WWW.FuhQuake.Net/">http://WWW.FuhQuake.Net/</a></p>
+			<p><a href="http://ZQuake.Frag.Ru/">http://ZQuake.Frag.Ru/</a></p>
+			<p><a href="http://WWW.idSoftware.Com/">http://WWW.idSoftware.Com/</a></p>
+			<p>The first ezQuake version (for MS Windows) has been created by Hugo Dworak, and then ported to Linux by David Balcom.</p>
+			<hr />
+			<h align="center">The following things had been ported from various clients:</h>
+			<hr />
+			<p>
+				<color>PORTED FEATURE</color><br />
+				/gl_turbfog, /cl_hightrack<br />
+				<color>PORTED FROM</color><br />
+				FuhQuake 0.28<br />
+				<color>CODE AUTHOR</color><br />
+				A Nourai (Fuh)<br />
+				<color>PORTED BY</color><br />
+				Hugo Dworak (shaman)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				/ignore_qizmo_spec, /cl_multiview, /track*<br />
+				<color>PORTED FROM</color><br />
+				-<br />
+				<color>CODE AUTHOR</color><br />
+				James Chaney (Oppy)<br />
+				<color>PORTED BY</color><br />
+				Hugo Dworak (shaman)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				no screensaver<br />
+				<color>PORTED FROM</color><br />
+				-<br />
+				<color>CODE AUTHOR</color><br />
+				Perttu Lahtinen (luny)<br />
+				<color>PORTED BY</color><br />
+				Hugo Dworak (shaman)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				keymap support, /cl_showkeycodes<br />
+				<color>PORTED FROM</color><br />
+				-<br />
+				<color>CODE AUTHOR</color><br />
+				Matthias Mohr (Massa)<br />
+				<color>PORTED BY</color><br />
+				Hugo Dworak (shaman)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				/gl_fog<br />
+				<color>PORTED FROM</color><br />
+				Telejano v7<br />
+				<color>CODE AUTHOR</color><br />
+				Tomas Jakobsson (Tomaz)<br />
+				<color>PORTED BY</color><br />
+				Hugo Dworak (shaman)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				/cl_camera_death, /cl_camera_tpp, all eyecandy effects<br />
+				<color>PORTED FROM</color><br />
+				AMFQuake 0.39 Final<br />
+				<color>CODE AUTHOR</color><br />
+				Scott Rosevear (Vultwah)<br />
+				<color>PORTED BY</color><br />
+				Hugo Dworak (shaman)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				/draw_fps, /demo_getping, /calendar, /date, /con_timestamps, /con_sound_*, -noscripts, %n macro, %N macro, /vid_flashonactivity, server browser - /sb_*, /allow_f_cmdline, /allow_f_system, f_scripts, f_cmdline, f_system, /allow_scripts, XML/XSL /help /describe<br />
+				<color>PORTED FROM</color><br />
+				MQWCL 0.97b<br />
+				<color>CODE AUTHOR</color><br />
+				Arkadiusz Kazmierowski (Azazello)<br />
+				<color>PORTED BY</color><br />
+				Hugo Dworak (shaman)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				/scr_newhud, /hud_*, accurate netgraph<br />
+				<color>PORTED FROM</color><br />
+				MQWCL 0.97b<br />
+				<color>CODE AUTHOR</color><br />
+				Arkadiusz Kazmierowski (Azazello)<br />
+				<color>PORTED BY</color><br />
+				David Balcom (hexum)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				better Linux /vid_vsync<br />
+				<color>PORTED FROM</color><br />
+				-<br />
+				<color>CODE AUTHOR</color><br />
+				Alan Kivlin (Strider)<br />
+				<color>PORTED BY</color><br />
+				David Balcom (hexum)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				independent physics (/cl_physfps)<br />
+				<color>PORTED FROM</color><br />
+				-<br />
+				<color>CODE AUTHOR</color><br />
+				Anton Gavrilov (Tonik)<br />
+				<color>PORTED BY</color><br />
+				James Chaney (Oppy)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				-allowmultiple<br />
+				<color>PORTED FROM</color><br />
+				ZQuake 0.15b<br />
+				<color>CODE AUTHOR</color><br />
+				Anton Gavrilov (Tonik)<br />
+				<color>PORTED BY</color><br />
+				Vladimir Druzenko (VVD)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				AVI capturing, video compression<br />
+				<color>PORTED FROM</color><br />
+				JoeQuake 0.14<br />
+				<color>CODE AUTHOR</color><br />
+				Anthony Bailey<br />
+				<color>PORTED BY</color><br />
+				Jozsef Szalontai<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				QuakeWorld for Freshies (a manual)<br />
+				<color>PORTED FROM</color><br />
+				-<br />
+				<color>CODE AUTHOR</color><br />
+				Mirco Strissel (Apollyon)<br />
+				<color>PORTED BY</color><br />
+				Taneli Mastokangas (tanelii)<br />
+			</p>
+			<p>
+				<color>PORTED FEATURE</color><br />
+				FuhQuake Online Manual (commands reference)<br />
+				<color>PORTED FROM</color><br />
+				-<br />
+				<color>CODE AUTHOR</color><br />
+				Mikko Rasanen (Goljat)<br />
+				<color>PORTED BY</color><br />
+				Jan Raszyk (JohnNy_cz)<br />
+			</p>
+			<hr />
+			<h align="center">The following features has been written from scratch for ezQuake:</h>
+			<hr />
+			<p>
+				<color>CODE AUTHOR</color><br />
+				Andrey Belik (Tyrannos)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				ezStart - Win32 command line configurator
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				David Balcom (hexum)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				the security module, Linux /vid_flashonactivity, Linux /vid_minimize, Linux evdev, /gl_coronas_tele, running server browser without root access required, visible lightning blood, /vid_minimize, /r_drawflat, /r_floorcolor, /r_wallcolor
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				Hugo Dworak (shaman)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				/skygroup, /r_telecolor, /r_lavacolor, /r_slimecolor, /r_watercolor, /con_shift, /tp_name_rune_*, -noshadows, /gl_lightning_size, /gl_lumaTextures, /scr_tracking, /msg_filter, /cl_confirmQuit, teamplay.cfg, movement.cfg, conwidth512.cfg, quick graphics settings switching, /gl_fogsky
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				James Chaney (Oppy)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				/bind printscr
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				Jozsef Szalontai<br />
+				<color>ORIGINAL FEATURES</color><br />
+				new flame model, AVI audio MP3 compression
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				Jan Raszyk (JohnNy_cz)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				FPD encoder/decoder, XML generated documentation predefined graphics configuration files
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				Juergen Legler (jogi)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				new autocompletion code, con_highlight
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				Oscar Vives (Tei)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				/gl_surface_*, /cl_messages
+			</p>
+			<p>
+				<color>CODE AUTHOR</color><br />
+				Vladimir Druzenko (VVD)<br />
+				<color>ORIGINAL FEATURES</color><br />
+				removing demos from the server browser, /scr_newhud 2, /cl_crypt_rcon
+			</p>
+			<hr />
+			<h align="center">Additional credits:</h>
+			<hr />
+			<p>
+				<color>CONTRIBUTOR</color><br />
+				David Balcom (hexum)<br />
+				<color>ROLE</color><br />
+				SF project administration, testers coordination, porting MS Windows version to Linux, CVS support
+			</p>
+			<p>
+				<color>CONTRIBUTOR</color><br />
+				Hugo Dworak (shaman)<br />
+				<color>ROLE</color><br />
+				SF project administration, website, IRC support
+			</p>
+			<p>
+				<color>CONTRIBUTOR</color><br />
+				James Chaney (Oppy)<br />
+				<color>ROLE</color><br />
+				QuakeNet IRC operator, CVS support
+			</p>
+			<p>
+				<color>CONTRIBUTOR</color><br />
+				Niclas Lindstrom (Empezar)<br />
+				<color>ROLE</color><br />
+				IRC bot hosting, public FTP+HTTP for developers
+			</p>
+			<p>
+				<color>CONTRIBUTOR</color><br />
+				Vinicius Oliveira (ChamaS)<br />
+				<color>ROLE</color><br />
+				South American mirror account
+			</p>
+			<hr />
+			<h align="center">People who allowed ezQuake in leagues:</h>
+			<hr />
+			<p>
+				<color>LEAGUE</color><br />
+				Custom DuelMap Tournament 2004<br />
+				<color>CREW</color><br />
+				Link, Zalon, Ocoini, IbsenKhan
+			</p>
+			<p>
+				<color>LEAGUE</color><br />
+				DuelMania.uk Season 1<br />
+				<color>CREW</color><br />
+				gaz, telly
+			</p>
+			<p>
+				<color>LEAGUE</color><br />
+				DuelMania.hu Season 1<br />
+				<color>CREW</color><br />
+				crash, Iron, ox
+			</p>
+			<p>
+				<color>LEAGUE</color><br />
+				DuelMania.ru Season 1<br />
+				<color>CREW</color><br />
+				b1aze, glad, slam, VVD
+			</p>
+			<p>
+				<color>LEAGUE</color><br />
+				Czech Quakeworld Events 4<br />
+				<color>CREW</color><br />
+				JohnNy_cz, Goodman
+			</p>
+			<p>
+				<color>LEAGUE</color><br />
+				Electronic Sports League<br />
+				<color>CREW</color><br />
+				Apollyon
+			</p>
+		<p>Thanks to SourceForge.net for CVS/website/project hosting and Brazilian Terra for South American binary/sources hosting.</p>
+		<h>Current project members list</h>
+		<p>(11 developers, 10 testers, 2 doc writers as for Nov 13th, 2004):</p>
+		<a href="http://SF.net/project/memberlist.php?group_id=117445">http://SF.net/project/memberlist.php?group_id=117445</a>
+		<hr />
+		<h>LICENSE AND WARRANTY</h>
+		<p>This software is released under the GNU GPL licence. Read gnu.txt for details of the licence and warranty.</p>
+		<p>
+		THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+		WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+		OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+		DISCLAIMED.  IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR
+		ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+		SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+		LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+		USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+		ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+		OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+		OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+		SUCH DAMAGE.
+		</p>
+		<hr />
+		<h align="center">OFFICIAL WEBSITE</h>
+		<p>
+			<a href="http://ezQuake.SourceForge.net/">http://ezQuake.SourceForge.net/</a>
+		</p>
+		<h align="center">OFFICIAL PROJECT WEBSITE</h>
+			<p>
+				<a href="http://ezQuake.SourceForge.net/">http://SourceForge.net/projects/ezquake/</a>
+			</p>
+		<h align="center">KNOWN BUGS</h>
+			<p>
+				<a href="http://SourceForge.net/tracker/?group_id=117445&amp;atid=678559">http://SourceForge.net/tracker/?group_id=117445&amp;atid=678559</a>
+			</p>
+		<h align="center">FEATURE REQUESTS</h>
+			<p>
+				<a href="http://SourceForge.net/tracker/?atid=678562&amp;group_id=117445&amp;func=browse">http://SourceForge.net/tracker/?atid=678562&amp;group_id=117445&amp;func=browse</a>
+			</p>
+		<h align="center">CVS REPOSITORY</h>
+			<p>
+				<a href="http://CVS.SourceForge.net/viewcvs.py/ezquake/">http://CVS.SourceForge.net/viewcvs.py/ezquake/</a>
+			</p>
+		<h align="center">OFFICIAL IRC CHANNEL</h>
+			<p>
+				#ezQuake on IRC.QuakeNet.Org
+				http://WWW.QuakeNet.Org/
+			</p>
+        <hr />
+        <br />
+	</body>
+</document>

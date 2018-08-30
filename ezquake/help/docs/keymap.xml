@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/document.xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/document.xsd">
+	<head>
+		<title>ezQuake Docs - Keymaps</title>
+		<date>2003-11-21</date>
+	</head>
+	<body>
+		<h align="center">ezQuake Keymaps</h>
+		<br />
+		<p>Here are a few explanations of the keymap features. To have more information about the keymap files, look at the included keymap files; e.g. "german.kmap" (made by me) or "dvorak.kmap" (this is a port of the dvorak.kmap-file which came with ZQuake, made by Tonik and extended by Rowdy) or one of the other included keymaps.</p>
+		<h>The keymap files should be placed in the qw or in the ezquake subdirectory. Some keymaps are included in the ezquake/keymaps from the required_files.zip that comes with ezQuake.</h>
+		<hr />
+		<p>The original keymap feature was made by Tonik and included in ZQuake. I (Matthias Mohr - Massa) restructured the whole keymap feature to be (in my eyes) more consistent. Unfortunetely my changes made it necessesary to break the compatibility to the ZQuake keymap files.</p>
+		<p>Tonik was able to solve this and now ZQuake is compatible with the changed file format - so if you want to use the files for both engines, you better use the new format!</p>
+		<h>I made a bunch of new commands and variables for the keymappings:</h>
+		<list>
+			<li>
+				<h>New variable "cl_showkeycodes":</h>
+					his variable enables/disables the output of informations to the currently pressed and/or released keys.
+					The following values are possible:
+				<pre>
+					"0" switch off output of scancode/keymapping information (Default).
+					"1", information about keys will be printed when the keys are pressed.
+					"2", information about keys will be printed when releasing the keys.
+					"3", information about keys will be printed when the keys are pressed and also when they are released.
+				</pre>
+			</li>
+		</list>
+		<list>
+			<li>
+				<h>New variable/command "keymap_name":</h>
+					This holds the name of the current keymappings; it has (currently) only informational purposes.
+					If no keymapping is active, it will contain the name "Default".
+					If a keymapping will be active and no name has been set, "Custom" will be used as name. It can easily be set with keymap_name "layoutname"
+			</li>
+		</list>
+		<list>			
+			<li>
+				<h>New command "keycode":</h>
+					This command enables the setting of a new keymapping.
+					<pre>
+					The syntax is:
+					keycode [ext] 'scancode' 'key' ['shiftmap'] ['altgrmap']
+					</pre>
+					If no key is given, the current mapping of the scancode will be printed.
+					The first call to that command (when no keymapping is active) copies the internal used default for an US keyboard to the keymapping tables.
+			</li>		
+		</list>
+		<list>				
+			<li>
+				<h>New command "keymap_reset":</h>
+					This command switches off the current keymappings and sets it back to the internal defaults; it also restores "keymap_name" to its default name "Default".
+					The defaults are an internally defined (and not changeable) keymapping for US keyboards.
+			</li>
+		</list>
+		<list>				
+			<li>
+				<h>New command "keymap_init"</h>
+					This resets the current keymapping and then generates a copy of the internal defaults (US keyboard) to be the new keymappings.
+					This can be used as a base to generate a new keymapping file. It has the same (unchangeable) mapping as the example keymap file "default.kmap"
+			</li>
+		</list>
+		<list>
+			<li>
+				<h>New command "keymap_load"</h>
+					This command first resets the current keymappings and then loads a new mapping from the given file.
+					<pre>
+					The syntax is:
+					keymap_load [layoutname] 'filename'
+					</pre>
+					If the layoutname is given, "keymap_name" will be set directly after loading the file.
+					The default file extension is ".kmap"; the syntax of the file has slightly changed compared to ZQuake (newer ZQuake versions also support this changed format).
+					<p>Look at the "german.kmap" which is included in the zip.</p>
+					In theory (untested) it is now possible to load such files with a normal
+					"exec" command because they contain only "official" commands;
+					but it is not recommended; the recommended way is to load the file with 
+					the "keymap_load" command, so that errors could easily be detected.
+					The loading-mechanism searches first in the subdirectory "keymaps" for the
+					file and if it could not be found it searches without subdirectory.
+					<p>So it searches through the "usual" directories (it uses the FS_FOpenFile-function), that means
+					"ezquake", "qw" and "id1".
+					Recommended place for keymap files is "qw/keymaps/"</p>
+			</li>	
+		</list>
+		<list>		
+			<li>
+				<h>New command "keymap_save":</h>
+					With this command the active keymappings will be written to a kmap file (including a descriptive header which explains the usage).
+					<pre>
+					The syntax is:
+					keymap_save [layoutname] 'filename'
+					</pre>
+					If the layoutname is given, "keymap_name" will be set before saving.
+					If the filename contains no directory, it writes itself to the "qw" directory.
+			</li>
+			</list>
+			<list>	
+			<li>
+				<h>New command "keymaplist":</h>
+					This command prints all the current keymappings to the Quake console.
+			</li>			
+		</list>
+		<br />
+		<hr />
+		<p>Enjoy, Matthias Mohr, aka "Massa"</p>
+	</body>
+</document>

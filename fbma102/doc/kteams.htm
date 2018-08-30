@@ -1,0 +1,1191 @@
+<html>
+
+<head>
+<title>Kombat Teams Documentation</title>
+<style type="text/css">
+<!-- 
+	a:hover { color: red; font-weight: bold} 
+	a { text-decoration: none; font-weight: bold}
+	.linky { font-family: Arial}
+-->
+</style>
+</head>
+
+<body vlink="#0000FF" alink="#0000FF" style="font-family: Arial">
+
+<h2 align="center"><a name="THE TOP OF IT"><u><font face="Arial"><big><big>Kombat Teams
+2.10 Documentation</big></big></font></u></a></h2>
+
+<p>&nbsp; </p>
+
+<p><a href="#Introduction">Introduction</a></p>
+
+<p><br>
+<a href="#Getting Started">Getting Started</a></p>
+
+<blockquote>
+  <p><a href="#Where to get it">Where to get it</a><br>
+  <a href="#Installation">Installation</a><br>
+  </p>
+</blockquote>
+
+<p><a href="#Mod Commands">Mod Commands</a></p>
+
+<blockquote>
+  <p><a href="#Player Commands">Player Commands</a></p>
+  <blockquote>
+    <p><a href="#About">About</a><br>
+    <a href="#admin">Admin</a><br>
+    <a href="#berzerk">Berzerk</a><br>
+    <a href="#Break">Break<br>
+    </a><a href="#discharge">Discharge</a><br>
+    <a href="#dm">Dm</a><br>
+    <a href="#droppack">Droppack</a><br>
+    <a href="#dropquad">Dropquad</a><br>
+    <a href="#dropring">Dropring</a><br>
+    <a href="#fairpacks">Fairpacks</a><br>
+    <a href="#fragsdown">Fragsdown</a><br>
+    <a href="#fragsup">Fragsup</a><br>
+    <a href="#k_soundX">K_SoundX</a><br>
+    <a href="#list">List</a><br>
+    <a href="#lock">Lock</a><br>
+    <a href="#maps">Maps</a><br>
+    <a href="#overtime">overtime</a><br>
+    <a href="#maps">overtimeup</a><br>
+    <a href="#pickup">Pickup</a><br>
+    <a href="#powerups">Powerups</a><br>
+    <a href="#ready">Ready</a><br>
+    <a href="#reset">Reset</a><br>
+    <a href="#report">Report</a><br>
+    <a href="#rules">Rules</a><br>
+    <a href="#silence">Silence</a><br>
+    <a href="#scores">Scores</a><br>
+    <a href="#spawn666">Spawn666</a><br>
+    <a href="#spawn">Spawn</a><br>
+    <a href="#speed">Speed</a><br>
+    <a href="#stats">Stats</a><br>
+    <a href="#status2">Status2</a><br>
+    <a href="#status">Status</a><br>
+    <a href="#timedown1">Timedown1</a><br>
+    <a href="#timedown">Timedown</a><br>
+    <a href="#timeup1">Timeup1</a><br>
+    <a href="#timeup">Timeup</a><br>
+    <a href="#timex">TimeX</a><br>
+    <a href="#tp">Tp</a><br>
+    <a href="#who">Who</a><br>
+    <a href="#whonot">Whonot</a><br>
+    <a href="#whoskin">Whoskin</a></p>
+  </blockquote>
+  <p><br>
+  <a href="#Spectator Commands">Spectator Commands</a></p>
+  <blockquote>
+    <p><a href="#Spectator Admin">Admin</a><br>
+    <a href="#Spectator Cam">Cam</a><br>
+    <a href="#Spectator Join">Join</a><br>
+    <a href="#Spectator Scores">Scores</a><br>
+    <a href="#Spectator Status">Status</a><br>
+    <a href="#Spectator Status2">Status2</a><br>
+    <a href="#Spectator Who">Who</a><br>
+    <a href="#Spectator Whonot">Whonot</a><br>
+    <a href="#Spectator Whoskin">Whoskin</a><br>
+    </p>
+  </blockquote>
+  <a href="#Admin Commands"><p>Admin Commands</a></p>
+  <blockquote>
+    <p><a href="#Spectator Admin">Admin</a><br>
+    <a href="#Admin Forcebreak">Forcebreak</a><br>
+    <a href="#Admin Forcebreak">Forcekick</a><br>
+    <a href="#Admin Forcepause">Forcepause</a><br>
+    <a href="#Admin Forcestart">Forcestart</a><br>
+    <a href="#Admin Lockmap">Lockmap</a><br>
+    <a href="#Admin Master">Master</a><br>
+    <a href="#Admin Prewar">Prewar</a><br>
+    </p>
+  </blockquote>
+  <a href="#Qizmo Commands"><p>Qizmo Commands</a></p>
+  <blockquote>
+    <p><a href="#qtimer">Qtimer</a><br>
+    <a href="#qlag">Qlag</a><br>
+    <a href="#qenemy">Qenemy</a></p>
+  </blockquote>
+</blockquote>
+
+<p><a href="#Server Config">Server Config</a></p>
+
+<blockquote>
+  <p><a href="#Custom Map Support">Custom Map Support in Configs</a></p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<p><a href="#Tech Notes">Technical Notes</a></p>
+
+<blockquote>
+  <p><a href="#tech rate">Maxrate and Minrate</a><br>
+  <a href="#end overtime">Overtime</a><br>
+  <a href="#Tech Duel Mode">Kombat Teams in Duel Mode</a><br>
+  <a href="#Tech Deathmatch 2 Mode">Modified Deathmatch 2 Mode</a><br>
+  <a href="#Tech Respawn Types">Respawn Types</a><br>
+  <a href="#Tech Level Exiting">Level Exiting</a><br>
+  <a href="#Tech Player Reporting">Player Reporting</a><br>
+  <a href="#Tech Custom Deaths">Whats with all those &quot;his glasses&quot; AND &quot;his
+  death&quot; messages? </a><br>
+  <a href="#Tech Team Telefrags">Team Telefrags</a><br>
+  <a href="#Tech LockTypes">LockTypes</a><br>
+  <a href="#Tech Server Reset">Server Reset</a><br>
+  <a href="#Tech Alien Maps">Alien Maps</a><br>
+  <a href="#Tech Idle Bot">Idle Bot</a><br>
+  <a href="#Tech Pickup">Pickup</a></p>
+  <p>&nbsp;</p>
+</blockquote>
+
+<p><a href="#Thanks to">Thanks To</a></p>
+
+<hr>
+
+<h3 align="center"><a name="Introduction"><u>Introduction</u></a></h3>
+
+<p>Kombat Teams is a QUAKEWORLD ONLY patch by kemiKal_sWeMoB, Cenobite and Fang which
+means to simplify all forms of deathmatch games (1-1, 2-2, 4-4, 3-3-3, 31-1 etc.).<br>
+<br>
+It's a public release and provided with absolutely no warranties. The authors take no
+responsibility for the behaviour and functionality of it.<br>
+If you have any problems with 2.10 or suggestions then mail cenobite at address below.<br>
+<br>
+kemiKal: <a href="mailto:kemikal@kemikal.com">kemikal@kemikal.com</a><br>
+cenobite: <a href="mailto:cenobite@barrysworld.com">cenobite@barrysworld.com</a><br>
+fang: <a href="mailto:tjp@cc.jyu.fi">tjp@cc.jyu.fi</a><br>
+<br>
+The latest official version of Kombat Teams can always be found on: <a
+href="http://www.barrysworld.com/kteam">http://www.barrysworld.com/kteam</a></p>
+
+<p>&nbsp;</p>
+
+<h3 align="center"><a name="Getting Started"><u>Getting Started</u></a></h3>
+
+<p>&nbsp;&nbsp;&nbsp; Firstly, you will have to download the Mod and also all the Server
+files that are needed.&nbsp; See below for all these site links.&nbsp; You will need a
+decent spec server if you wish to handle Big Games but if you only plan on running a small
+server than if you use Linux then you can run this mod comfortably.</p>
+
+<p>&nbsp;</p>
+
+<h4><a name="Where to get it"><u>Where to get it</u></a></h4>
+
+<p>&nbsp;&nbsp;&nbsp; The Mod itself is available from the following site <a
+href="http://www.barrysworld.com/kteam">www.barrysworld.com/kteam</a>.&nbsp; You will also
+need to have QuakeWorld Server which is available from <a href="http://www.quakeworld.net">www.quakeworld.net</a>.
+&nbsp; Currently, QuakeWorld can be run on a variety of Server Platforms such as Windows
+(all versions) and various Flavours of Unix.</p>
+
+<p>&nbsp;</p>
+
+<h4><a name="Installation"><u>Installation</u></a></h4>
+
+<p>&nbsp;&nbsp;&nbsp; Get the mod obviously =], then create a directory called
+&quot;kteam&quot; in your quakedirectory and copy all files supplied with the patch into
+it. Edit the &quot;server.cfg&quot; file to your liking and start the server by typing
+&quot;qwsv +gamedir kteam&quot;.&nbsp; There are various configs supplied with this Patch
+to allow you to get the server up and running as quickly as possible.&nbsp; These configs
+are supplied with the patch and will be in the /examples/ directory.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Please refer to the quakeworld server documentation if you want your
+server to show up on any of the masterservers available. For best server performance, run
+your server on a machine using unix (or any of its clones) or a PC running WINDOWS NT.
+Please make sure that you use the QuakeWorld 2.3 server to run the patch.&nbsp; You can
+obtain QuakeWorld Server from <a href="http://www.quakeworld.net/">here</a>.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Once you have started up the server then you will be ready to
+connect to the Server with a Client and start playing.&nbsp; If you have any problems with
+the mod <strong>please</strong> read the documentation first.</p>
+
+<p>&nbsp;</p>
+
+<h3 align="center"><a name="Mod Commands"><u>Mod Commands</u></a></h3>
+
+<h4><a name="Player Commands">Player Commands</a></h4>
+
+<p>These are commands that can be typed by the player at the console to change the way the
+mod is set up.&nbsp; This is only if the server is *not* in master mode.&nbsp; If it is
+then alot of these commands are locked out.</p>
+<div align="center"><center>
+
+<table border="1" width="100%" cellpadding="10">
+  <tr>
+    <td width="14%" align="center"><a name="About">About</a></td>
+    <td width="86%" align="center">Shows you the version number of the patch and a small note.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="admin">admin</a></td>
+    <td width="86%" align="center">If admins are allowed on the server, this is how you become
+    one. A six digit code will then be entered.. <br>
+    Each digit is entered by an impulse command between 1 and 9.<br>
+    </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="berzerk">Berzerk</a><br>
+    </td>
+    <td width="86%" align="center">Toggles berzerk mode.<br>
+    Berzerk mode is meant to release agression built up after a cautious game.<br>
+    When only &quot;k_btime&quot; seconds remains of the game, all players gets QUAD/OCTA
+    powered<br>
+    for the remainder of the match and the whole level starts strobing.<br>
+    The first 2 seconds, everyone enjoys a bit of satan's power.<br>
+    (The 2 seconds of 666 was put in to prevent disastrous berzerk rocketjumps)<br>
+    </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Break">Break</a></td>
+    <td width="86%" align="center">This command can do various things depending on the State
+    of the Server :<br>
+    <table border="0" width="100%">
+      <tr>
+        <td width="19%" align="center">PREGAME<br>
+        </td>
+        <td width="81%" align="left">tells the server that you're not ready after all.<br>
+        </td>
+      </tr>
+      <tr>
+        <td width="19%" align="center">COUNTDOWN<br>
+        </td>
+        <td width="81%" align="left">stops the countdown (maybe to change some settings).<br>
+        </td>
+      </tr>
+      <tr>
+        <td width="19%" align="center">MATCH</td>
+        <td width="81%" align="left"><br>
+        toggle your vote for match-break (if you've got a majority voting with you, the match will
+        stop and results won't be logged).<br>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><p align="center"><a name="discharge">discharge</a></td>
+    <td width="86%" align="center">Toggles if players should be allowed to
+    &quot;discharge&quot; in water.<br>
+    If disabled, players will loose all their cells on discharge but not<br>
+    actually harm anyone.<br>
+    </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="dm">dm</a><br>
+    </td>
+    <td width="86%" align="center">Steps through deathmatch-modes 1-5.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><p align="center"><a name="droppack">droppack</a><br>
+    k_dp 0/1<br>
+    </td>
+    <td width="86%" align="center">Toggles whether or not Backpacks Drop when you kill
+    someone.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="dropquad">dropquad</a><br>
+    k_dq 0/1<br>
+    </td>
+    <td width="86%" align="center">Toggles whether or not Quad Drops when you kill the person
+    with Quad.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="dropring">dropring</a><br>
+    k_dr 0/1</td>
+    <td width="86%" align="center">Toggles whether or not Ring Drops when you kill the person
+    with Ring.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="efficiency">efficiency</a></td>
+    <td width="86%" align="center">Prints player efficiences during or after a game</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="fairpacks">fairpacks</a><br>
+    k_frp 0/1/2</td>
+    <td width="86%" align="center">Toggles if backpacks will contain former-weapon-in-hand or
+    former-best-weapon. Or now drops the last weapon they fired.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="fragsdown">fragsdown</a></td>
+    <td width="86%" align="center">Fraglimit -10 (minimum is 0).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="fragsup">fragsup</a></td>
+    <td width="86%" align="center">Fraglimit +10 (will not rise above 100 frags)<br>
+    </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="k_soundX">k_soundX</a></td>
+    <td width="86%" align="center">Where X is a value between 1 and 6.<br>
+    Plays a soundfile on all your teammates computers (if they've got k_sound set to 1). If
+    you want your client to play sounds that your teammates triggers, type (in the console):<br>
+    setinfo k_sound 1<br>
+    <br>
+    Your teammates must have the files &quot;ktsound1.wav&quot; - &quot;ktsound6.wav&quot; in
+    their &quot;id1/sound&quot; directory or they won't hear anything regardless of the
+    k_sound flag.<br>
+    <br>
+    Remember: If you trigger ktsound1.wav, it will play the ktsound1.wav that<br>
+    resides on your teammates disk/s, not the one on yours.<p>*** The default samples are:<br>
+    ktsound1.wav &quot;Home&quot;<br>
+    ktsound2.wav &quot;Cellar&quot;<br>
+    ktsound3.wav &quot;Tower&quot;<br>
+    ktsound4.wav &quot;Help/Assist&quot;<br>
+    ktsound5.wav &quot;Warning&quot;<br>
+    ktsound6.wav &quot;Report&quot;</p>
+    <p>The standard soundbanks can be found at <a href="http://www.kemikal.com">http://www.kemikal.com</a>.
+    </p>
+    <p>To be able to use your samples on any server running KT1.96 or higher - put the samples
+    in your &quot;ID1/sound&quot; directory (if &quot;sound&quot; doesn't exist, create it
+    yourself).<br>
+    <br>
+    Alternatively you can create subdirectories inside ID1/sound called &quot;male&quot;,
+    &quot;female&quot; etc. and put the desired soundbanks into these - then during game you
+    can tell Kombat Teams that you want a female voice by typing (in the console):<br>
+    setinfo k_sdir &quot;female&quot;<br>
+    </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="list">list</a></td>
+    <td width="86%" align="center">Prints a list of not ready players, can be done once every
+    10 seconds.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="lock">lock</a></td>
+    <td width="86%" align="center">Steps through the ServerLock-types.<br>
+    See <a href="#Tech LockTypes">Lock Types</a> in <a href="#Tech Notes">Technical Notes</a>.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="maps">maps</a></td>
+    <td width="86%" align="center">Displays custom maps supported by the server.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="overtime">overtime</a></td>
+    <td width="86%" align="center">Switches between either Overtime mode being off or on.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="overtimeup">overtimeup</a></td>
+    <td width="86%" align="center">Increments the time to add on until it reaches 10 then
+    loops back to 1.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="pickup">pickup</a></td>
+    <td width="86%" align="center">Toggles your vote for a &quot;pickup&quot; game.<br>
+    See <a href="#Tech Pickup">Pickup</a> in <a href="#Tech Notes">Technical Notes</a>.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="powerups">powerups</a></td>
+    <td width="86%" align="center">Toggles the availability of powerups during game
+    (quad/666/ring/env.suit).<br>
+    Pre game, quad and 666 will glow if powerups are enabled and not if not :)&nbsp; Also
+    allows you to have a powerup jammer where it will spawn items =/- 3 seconds.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="ready">ready</a></td>
+    <td width="86%" align="center">Tell the server that you're ready for some action.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="reset">reset</a></td>
+    <td width="86%" align="center">Resets server to default (see <a href="#Tech Server Reset">Server
+    Reset</a> in <a href="#Tech Notes">Technical Notes</a>).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="report">report</a></td>
+    <td width="86%" align="center">Reports your Armour, Health and Current Weapon to all
+    TeamMates.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="rules">rules</a><br>
+    </td>
+    <td width="86%" align="center">Prints vital information (selected goodies from this
+    document) depending on what is enabled and what is not.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="silence">silence</a><br>
+    k_spectalk 0/1</td>
+    <td width="86%" align="center">Toggles the ability for spectators to talk to players
+    during the match.&nbsp; <br>
+    In addition to this it also allows/disallows the spectator -&gt; player voice feature of
+    qizmo (fpd 64). </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="scores">scores</a></td>
+    <td width="86%" align="center">Prints teamscores during game including players that
+    dropped<br>
+    Also shows current remaining matchtime.<br>
+    It will only show scores in matches that involves 2 teams and at least 3 players on
+    match-start.&nbsp; Shows minutes with seconds as XX.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="spawn666">spawn666</a><br>
+    </td>
+    <td width="86%" align="center">Toggles player invulnerability on respawn during match. <br>
+    The invulnerability (666) will last for 2 secs but the player will not glow to give away
+    spawn position.<br>
+    Should the player attack with any weapon but axe or shotgun during these 2 seconds,
+    his/her 666 will vanish.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="spawn">spawn</a><br>
+    </td>
+    <td width="86%" align="center">Toggles between<br>
+    <table border="0" width="100%">
+      <tr>
+        <td width="50%" align="right">0.</td>
+        <td width="50%">QuakeWorld Standard Respawns</td>
+      </tr>
+      <tr>
+        <td width="50%" align="right">1.</td>
+        <td width="50%">Kteam SpawnSafety</td>
+      </tr>
+      <tr>
+        <td width="50%" align="right">2.</td>
+        <td width="50%">Kombat Team Respawns</td>
+      </tr>
+    </table>
+    <p>See <a href="#Tech Respawn Types">Spawn Explanation</a> in <a href="#Tech Notes">Technical
+    Notes</a> section . </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="speed">speed</a></td>
+    <td width="86%" align="center">Toggles sv_maxspeed which sets how fast players can run
+    (320/k_highspeed).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="stats">stats</a></td>
+    <td width="86%" align="center">Prints playerstats during or after a game.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="status2">status2</a></td>
+    <td width="86%" align="center">Prints match-settings such as Spectalk Settings, Qizmo
+    Settings and Lock Settings.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="status">status</a></td>
+    <td width="86%" align="center">Prints most frequently changed Match Settings.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="timedown1">timedown1</a></td>
+    <td width="86%" align="center">Timelimit -1 (will not go under 5 mins).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="timedown">timedown</a></td>
+    <td width="86%" align="center">Timelimit -5 (will not go below 5 minutes)</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="timeup1">timeup1</a></td>
+    <td width="86%" align="center">Timelimit +1 (will not rise above 60 minutes).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="timeup">timeup</a></td>
+    <td width="86%" align="center">Timelimit +5 (will not rise above &quot;k_timetop&quot;
+    minutes).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="timex">timex</a></td>
+    <td width="86%" align="center">Where X = 5, 10, 15, 20, 25 or 30.<br>
+    Sets timelimit accordingly (will not go above &quot;k_timetop&quot; minutes).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="tp">tp</a></td>
+    <td width="86%" align="center">Steps through teamplay-modes 0-3.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="who">who</a></td>
+    <td width="86%" align="center">Prints playerlist which shows which are players are ready
+    (and which team) and which are not.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="whonot">whonot</a></td>
+    <td width="86%" align="center">Prints playerlist which shows which are players have not
+    readied yet.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="whoskin">whoskin</a></td>
+    <td width="86%" align="center">Prints a playerlist showing all the skins that players are
+    using.</td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h4><a name="Spectator Commands">Spectator Commands</a></h4>
+
+<p>These are the commands that the mod allows you to use when you connect to a server as a
+Spectator.</p>
+<div align="center"><center>
+
+<table border="1" width="100%" cellpadding="10">
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Admin">admin</a></td>
+    <td width="86%" align="center">If admins are allowed on the server, this is how you become
+    one. A six digit code will then be entered.. <br>
+    Each digit is entered by an impulse command between 1 and 9.<br>
+    </td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Cam">Cam</a></td>
+    <td width="86%" align="center">Shows info on Kombat Team's built-in camera functions.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Join">Join</a></td>
+    <td width="86%" align="center">Reconnects to server as a player (Same as Typying spectator
+    0 and reconnect in console).</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Scores">Scores</a></td>
+    <td width="86%" align="center">Prints teamscores during game including players that
+    dropped<br>
+    Also shows current remaining matchtime.<br>
+    It will only show scores in matches that involves 2 teams and at least 3 players on
+    match-start.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Status">Status</a></td>
+    <td width="86%" align="center">Prints most frequently changed Match Settings.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Status2">Status2</a></td>
+    <td width="86%" align="center">Prints match-settings such as Spectalk Settings, Qizmo
+    Settings and Lock Settings.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Who">Who</a></td>
+    <td width="86%" align="center">Prints playerlist which shows which are players are ready
+    (and which team) and which are not.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Whonot">Whonot</a></td>
+    <td width="86%" align="center">Prints playerlist which shows which are players have not
+    readied yet.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Spectator Whoskin">Whoskin</a></td>
+    <td width="86%" align="center">Prints a playerlist showing all the skins that players are
+    using.</td>
+  </tr>
+</table>
+</center></div>
+
+<p><br>
+</p>
+
+<h4><a name="Admin Commands">Admin Commands</a></h4>
+
+<p>&nbsp;</p>
+<div align="center"><center>
+
+<table border="1" width="100%" cellpadding="10">
+  <tr>
+    <td width="14%" align="center"><a name="Admin Admin">admin</a></td>
+    <td width="86%" align="center">Relieves you of your Admin rights.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Admin Forcebreak">Forcebreak</a></td>
+    <td width="86%" align="center">Forces match to end.<br>
+    Results will be logged as usual but &quot;%forcebreak%&lt;adminname&gt;&quot; will tell<br>
+    statistics-programs that the match was ended unnaturally and by whom.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="admin forcekick">Forcekick</a></td>
+    <td width="86%" align="center">If k_allowkick is set to 1 then you are allowed to kick on
+    the server.<br>
+    When you start it shows you how to navigate/kick players.<br>
+    <br>
+    impulse 1(axe) kicks current player<br>
+    impulse 2(sg) moves to next player<br>
+    impulse 3(ssg) exits from kick mode<br>
+    <br>
+    You can kick any player and spectator. If you miss a player/spectator<br>
+    keep hitting impulse 1 and it will go back to the start.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Admin Forcepause">Forcepause</a></td>
+    <td width="86%" align="center">Toggles pause during match.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Admin Forcestart">Forcestart</a></td>
+    <td width="86%" align="center">Gives players 10 seconds to ready themselves, after which
+    they get kicked if they're still not ready.<br>
+    Readied admins may type break to interrupt the countdown. <br>
+    Countdown then commences as usual.<p>***PLEASE NOTE*** If you do start a match this was it
+    locks the server out from new people joining so be warned.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Admin Lockmap">Lockmap</a></td>
+    <td width="86%" align="center">Toggles maplock.<br>
+    If maplock is enabled, only admins may change map.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Admin Master">Master</a></td>
+    <td width="86%" align="center">Toggles mastermode.<br>
+    In mastermode, only admins may change matchsettings (dm/tp/powerups etc).<br>
+    Mastermode also functions as a maplock.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="Admin Prewar">Prewar</a><br>
+    k_prewar 0/1</td>
+    <td width="86%" align="center">Toggles the &quot;k_prewar&quot; flag.<br>
+    When k_prewar = 1: players can fire prior to match (actually they can fire during too :))<br>
+    When k_prewar = 0: players can't fire prior to match (this is the discipline setting)<br>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center">NOTE: spectator admins can also use the following commands:<br>
+/tp /dm /powerups /timeup /timedown /spawn /silence /qtimer /qlag /qenemy /reset /maps</p>
+
+<p align="center">&nbsp;</p>
+
+<h4><a name="Qizmo Commands">Qizmo Commands</a></h4>
+
+<p>&nbsp;</p>
+<div align="center"><center>
+
+<table border="1" width="100%" cellpadding="10">
+  <tr>
+    <td width="14%" align="center"><a name="qtimer">qtimer</a></td>
+    <td width="86%" align="center">fpd XOR 2.<br>
+    Toggles lockout of the Qizmo powerup timers.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="qlag">qlag</a></td>
+    <td width="86%" align="center">fpd XOR 8.<br>
+    Toggles lockout of the Qizmo lag-set features.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="qenemy">qenemy</a></td>
+    <td width="86%" align="center">fpd XOR 32.<br>
+    Toggles lockout of the Qizmo enemies in the vicinity reporting.</td>
+  </tr>
+  <tr>
+    <td width="14%" align="center"><a name="qenemy">qpoint</a></td>
+    <td width="86%" align="center">fpd XOR 128.<br>
+    Toggles lockout of the Qizmo item-point function. (%x %y reporting).</td>
+  </tr>
+</table>
+</center></div>
+
+<p>! Note that the Qizmo commands uses a serverinfo key called &quot;fpd&quot; that is
+common to almost all other proxies such asl: Cheapo, ProxyLite etc..<br>
+</p>
+
+<p>The command is named after the Qizmo because the &quot;fpd&quot; key was introduced by
+its authors.<br>
+<br>
+!! for more information on <a href="http://qizmo.sci.fi/">Qizmo</a>, <a
+href="http://www.saunalahti.fi/~softech/cheapo.htm">Cheapo</a>, ProxyLite and NF proxy
+then go to the respective pages.</p>
+
+<p>&nbsp;</p>
+
+<h3 align="center"><a name="Server Config"><u>Server Config</u></a></h3>
+
+<p>A sample server.cfg is included in the KOMBAT TEAMS package, please use that and modify
+it as your heart desires. Settings such as startup values for deathmatch, teamplay and
+settings for other standard QW servervariables are in there.&nbsp; You should consult the
+documentation for QWSV for settings that relate directly to Quakeworld Settings.&nbsp; The
+following Flags are used by Kteam :</p>
+
+<p>&nbsp;</p>
+<div align="center"><center>
+
+<table border="1" width="100%" cellpadding="10">
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">dq 0</td>
+    <td width="67%" align="center">drop quad off (1 to enable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">dr 0</td>
+    <td width="67%" align="center">drop ring off (1 to enable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">dp 1</td>
+    <td width="67%" align="center">drop backpacks on (0 to disable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_spw 2</td>
+    <td width="67%" align="center">Kombat Teams respawns (see technical notes)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_pow 1</td>
+    <td width="67%" align="center">powerups on (0 to disable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_dis 1</td>
+    <td width="67%" align="center">discharge on (0 to turn off)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_666 0</td>
+    <td width="67%" align="center">respawn 666 off (1 to enable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_bzk 0</td>
+    <td width="67%" align="center">berzerk off (1 to enable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_btime 20</td>
+    <td width="67%" align="center">berzerk time</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_frp 0</td>
+    <td width="67%" align="center">best weapon backpacks (1 to enable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_lockmap 0</td>
+    <td width="67%" align="center">prevent players from changing map (1 = lock, 0 = no lock)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_lockmin 0</td>
+    <td width="67%" align="center">minimum number of teams in game</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_lockmax 32</td>
+    <td width="67%" align="center">maximum number of teams in game</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_membercount 0</td>
+    <td width="67%" align="center">minimum number of players in each team to start match</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_prewar 1</td>
+    <td width="67%" align="center">enable playerfire before matchstart (0 to disable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_ann 0</td>
+    <td width="67%" align="center">announce spectators during game (0 to disable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_kfp 0</td>
+    <td width="67%" align="center">&quot;kill&quot; flood protection off (1 to enable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_sready 1</td>
+    <td width="67%" align="center">players glow when not ready (0 to disable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_exclusive 1</td>
+    <td width="67%" align="center">number of players gets locked on gamestart (0 to disable)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_count 20</td>
+    <td width="67%" align="center">number of seconds for the countdown to last</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_admins 1</td>
+    <td width="67%" align="center">allow admins (0 to disallow)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_admincode 666666</td>
+    <td width="67%" align="center">6 digit admin code (digits between 1 and 9 only)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_spectalk 1</td>
+    <td width="67%" align="center">spectators can talk to players during game (0 to silence)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_dm2mod 1</td>
+    <td width="67%" align="center">modified deathmatch 2 mode (see technical notes)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_duel 0</td>
+    <td width="67%" align="center">kombat teams set to duel mode (no teamplay change) 1 =
+    active</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_timetop 60</td>
+    <td width="67%" align="center">maximum time that can be allocated for a game by the
+    players</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_highspeed 370</td>
+    <td width="67%" align="center">/speed toggles between sv_maxspeed 320 and k_highspeed</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_defmap dm4</td>
+    <td width="67%" align="center">server default map (see <a href="#Tech Alien Maps">ALIEN
+    MAPS</a>)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_master 0</td>
+    <td width="67%" align="center">mastermode off (1 to enable, see admin commands for
+    details)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_idletime 0</td>
+    <td width="67%" align="center">idle bot off (see <a href="#Tech Idle Bot">IDLE BOT</a>)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_maxrate</td>
+    <td width="67%" align="center">Set max rate allowed on the server</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_minrate</td>
+    <td width="67%" align="center">Set min rate allowed on the server</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_allowkick</td>
+    <td width="67%" align="center">if 1 = admins can kick with /forcekick else they cant.</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_overtime</td>
+    <td width="67%" align="center">If 0 no overtime, 1 add on X minutes set below</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_exttime</td>
+    <td width="67%" align="center">Sets amount of time to use for overtime.</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_motd 1</td>
+    <td width="67%" align="center">first line of text in the motd (preceeded only by
+    &quot;Welcome to&quot;)</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">k_motd 2</td>
+    <td width="67%" align="center">second line of text in the motd (preceeded by &quot;Welcome
+    to&quot; and k_motd1)</td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+
+<p><a name="Custom Map Support">Custom Map Support</a></p>
+
+<p>You can add in Support for Custom Maps by using the following commands in your Server
+config file<br>
+</p>
+<div align="center"><center>
+
+<table border="1" width="100%" cellpadding="10">
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">1000</td>
+    <td width="67%" align="center">death32c</td>
+  </tr>
+  <tr>
+    <td width="11%" align="right">Localinfo</td>
+    <td width="22%" align="left">1001</td>
+    <td width="67%" align="center">base32b</td>
+  </tr>
+</table>
+</center></div>
+
+<p>You have to make sure that there is no gaps in the list of maps.&nbsp; A sample map
+list is included in the /configs/maps.cfg file.&nbsp; Oh and dont forget <strong>no gaps! </strong>Also
+see the section entitled <a href="#Tech Alien Maps">Alien Maps</a> for some more Map
+related Information.</p>
+
+<p>&nbsp;</p>
+
+<h3 align="center"><a name="Tech Notes"><u>Technical Notes</u></a></h3>
+
+<p>&nbsp;</p>
+
+<p><a name="tech rate">MAXRATE AND MINRATE</a></p>
+
+<p>If this is set to anything above 0 then it checks players on connect to see if their
+rate is either above or below the allowed settings. It also checks throughout game to see
+if anyone is trying to fool kteam :)</p>
+
+<p>&nbsp;</p>
+
+<p><a name="end overtime">OVERTIME</a></p>
+
+<p>If it is switched on then when game ends it will check the scores. If they are equal it
+will add on the time specified in k_exttime. If the game is again a draw after that time
+has counted down it will add it on again etc.. Could be some long games heh.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="Tech Duel Mode">Kombat Teams in Duel Mode</a></p>
+
+<p>If k_duel is set to 1, the server will not allow teamplay changes. Meaning, if you're
+running a 1-1 server - set k_duel to 1 and teamplay to 0. Also, /forcestart or the idle
+bot forcestart usually requiers you to join an existing team while counting down, this is
+not the case in duel mode.<br>
+<br>
+<br>
+<a name="Tech Deathmatch 2 Mode">Modified Deathmatch 2 Mode</a></p>
+
+<p>Setting the flag &quot;k_dm2mod&quot; in the server.cfg to 1 removes all armor on the
+map at matchstart if deathmatch mode 2 is chosen. The normal dmm2 is available by setting
+the same serverflag to &quot;0&quot;.<br>
+<br>
+<br>
+<a name="Tech Respawn Types">Respawn Types</a></p>
+
+<p>Kombat Teams respawns differs from the normal QW respawns (also available in the patch)
+in that they spawn players on a spawnpoint even though someone else is occupying it.
+There's exceptions to this rule however, a player that has just spawned is considered a no
+spawn-target for 120 gameticks and a player can never spawn on the same spot twice in a
+row (unless the map contains less than 2 spawnpoints or all spawnpoints are full).<br>
+<br>
+For the first 3 seconds of a match, Kombat Teams respawns will attempt to avoid spawnfrags
+entirely (note that this is only for the spawntype &quot;Kombat Teams respawns&quot;). To
+have yourself spawned at what you consider to be a bad spawn before the match starts as
+not to get there won't work, the patch doesn't take pregame spawns into account. This type
+of respawns is by default enabled in KT since the patch's main function is to handle
+teamgames and we don't want any camping on important spots (like RA on dm4 for example).<br>
+<br>
+With the release of version 2.07, &quot;KT SpawnSafety&quot; was introduced.&nbsp; KT
+SpawnSafety means to avoid telefrags during games as much as possible (even if all
+spawnpoints are full) and tries to avoid spawning you at the same spot twice in a row.<br>
+<br>
+<br>
+<a name="Tech Level Exiting">Level Exiting</a></p>
+
+<p>KT removes all &quot;level-exits&quot; at the start of each match. You will be able to
+walk through those teleporters without anything happening. Pre-game, you can still change
+level by walking through them (if the server's &quot;samelevel&quot; is set accordingly).<br>
+<br>
+<br>
+<a name="Tech Player Reporting">Player Reporting</a></p>
+
+<p>Best illustrated by example output, here's a couple:<br>
+</p>
+
+<p>(player): a:0 h:100 sg:25 <br>
+no armor, 100 health and a shotgun with 25 shells<br>
+<br>
+(player): ga:30 h:30 rl:5 <br>
+30 worth of green armor, 30 health and rocket launcher with 5 rockets<br>
+<br>
+(player): ra:200 h:250 rl:100 [-quad-] <br>
+200 units of red armor, 250 health, a rocket launcher with 100 rockets and the player is
+quadpowered<br>
+<br>
+<br>
+ARMOR TYPES: green (GA) yellow (YA) and red (RA)<br>
+WEAPONS: (this is the importancy order from lowest to highest)<br>
+axe (AXE) shotgun (SG) nailgun (NG) super shotgun (SSG) super nailgun (SNG)<br>
+grenade launcher (GL) lightning gun (LG) rocker launcher (RL).<br>
+<br>
+<br>
+<a name="Tech Custom Deaths">WHAT'S WITH ALL THOSE &quot;his glasses&quot; AND &quot;his
+death&quot; TEXTS? :</a></p>
+
+<p>Quake (and QW) uses male orientated messages that may or may not annoy you depending on
+your gender. Since the legend tells that there are a few girls and women out there gibbing
+with the rest of us, KT's got a function that displays genderbased messages accordingly.
+Your gender is determined as MALE by default but can be set to female by typing (in the
+console):<br>
+<br>
+Gender</p>
+
+<p><br>
+Controls genderbased messages such as &quot;checks his glasses&quot;.<br>
+Gender is always considered male unless gender equals &quot;f&quot;. Thus:<br>
+setinfo gender m = &quot;checks his glasses&quot; &quot;was telefragged by his
+teammate&quot; etc.<br>
+setinfo gender f = &quot;checks her glasses&quot; &quot;was telefragged by her
+teammate&quot; etc.<br>
+setinfo gender allelse = &quot;checks his glasses&quot; &quot;was telefragged by his
+teammate&quot; etc.<br>
+<br>
+k_sdir<br>
+See &quot;k_soundX&quot; under &quot;player commands explained&quot;.<br>
+<br>
+k_nick<br>
+If defined, it changes the output format of /report.<br>
+&quot;(yournamehere):&quot; at the start of the line get replaced<br>
+with k_nick. Example:<br>
+Your name is &quot;kemiKal_sWeMoB&quot;, you set your k_nick to &quot;-kK-&quot;. Now, in
+Kombat Teams versions previous to 2.10 you would see:<br>
+(kemiKal_sWeMoB): a:0 h:100 sg:25</p>
+
+<p>In version 2.10 or above however (if you got k_nick defined), it will read:<br>
+-kK- a:0 h:100 sg:25<br>
+<br>
+* &quot;k_flags&quot;:<br>
+Add flagvalues together to customize your settings.</p>
+
+<p>example: type &quot;setinfo k_flags 3&quot; in console to enable teamsounds and<br>
+autoscreenshot ((&quot;k_sound&quot; = 1 + &quot;k_sshot&quot; = 2) = 3).<br>
+</p>
+
+<p>FLAGVALUES:<br>
+-----------<br>
+1 = &quot;k_sound&quot; See &quot;k_soundX&quot; under &quot;player commands
+explained&quot;<br>
+2 = &quot;k_sshot&quot; Automatically take screenshot scoreboard at the end of a game<br>
+<br>
+<a name="Tech Team Telefrags">Team Telefrags</a></p>
+
+<p>If you get telefragged by one of your teammates, s/he doesn't get any frags for it but
+you get a death registred (not a -1 on frags but a +1 on deaths).<br>
+<br>
+<br>
+<a name="Tech LockTypes">LockTypes</a></p>
+
+<p>OFF = no locking.<br>
+ALL = lockout all players trying to enter if game is in progress.<br>
+TEAM = lockout all players trying to enter during match if their team is not set to one of
+the teams playing.<br>
+<br>
+Server Settings that functions as locks of a sort, are:<br>
+<br>
+k_lockmin (minimum number of teams in game)<br>
+k_lockmax (maximum number of teams in game)<br>
+k_membercount (minimum number of players in each team)<br>
+k_exclusive (if set, maxplayers is locked on matchstart)<br>
+<br>
+<br>
+<a name="Tech Server Reset">Server Reset</a></p>
+
+<p>On /reset, KT will execute the file &quot;configs/reset.cfg&quot; on the server.<br>
+<br>
+The ZIPped package of Kombat Teams should contain this directory and file. That file is to
+be considered as the server &quot;defaults&quot; and can be freely reconfigured as the
+server admin sees fit.<br>
+<br>
+If the server allow admins, admins may also execute special admin configs on the server,
+where the server keeps settings for different leagues, gametypes etc. This is done like
+this: 
+
+<ol>
+  <li>Become an admin by /admin and the correct sequence of impulses</li>
+  <li>Change /team to the name of the config you want to execute on the server<br>
+    (for example /team 1vs1, /team lock, /team dql etc.).</li>
+  <li>Now type /reset</li>
+  <li>If the server finds your config (configs/&lt;yourteam&gt;.cfg) the server will exectue
+    it and out a message to the player(s) that the server is setup according to your desires.
+    if you are in team &quot;&quot;, KT will simply execute &quot;configs/reset.cfg&quot;
+    instead.<br>
+    <br>
+  </li>
+</ol>
+
+<p>A sample admin server setup can be found in configs as &quot;kk.cfg&quot;.<br>
+<br>
+<br>
+<a name="Tech Alien Maps">Alien Maps</a> </p>
+
+<p>&nbsp;&nbsp;&nbsp; Since KT support maps that some people might not have on their
+harddrive it also allows the Serveradmin to set a defaultmap to which it will change to
+when the last player on the server logs out. </p>
+
+<p>In older versions of KT players could log off during mapchange which could leave the
+server empty on an unwanted map; KT now checks a minute after mapchange if the server is
+empty or not - </p>
+
+<p>if it is, KT switches back to k_defmap. <br>
+Alternatively of course, the admin (you) can allow map downloading. The localinfo value to
+set defaultmap is called &quot;k_defmap&quot;. </p>
+
+<p>If &quot;k_defmap&quot; is not set - KT won't try to change to the default map.<br>
+<br>
+<br>
+<a name="Tech Idle Bot">Idle Bot</a></p>
+
+<p>This is a mean fellow.</p>
+
+<p><br>
+If activated (by setting k_idletime above 0) he will wait for at least 50% of the players
+on the server to go ready, after that he will nag on the others to go ready every 5
+seconds thereafter (and seconds 4, 3, 2 and 1). </p>
+
+<p>After &quot;k_idletime&quot; seconds have passed (since 50% of the players got ready)
+the idlebot will kick all players that have failed to go ready and start normal countdown
+if more than 2 players remain on the server. </p>
+
+<p>It is only recommended that you use the idlebot for public servers that are 1vs1 or
+2vs2 oriented. </p>
+
+<p>Don't annoy your guests =]<br>
+<br>
+<br>
+<a name="Tech Pickup">Pickup</a></p>
+
+<p>A simple function. If a majority (&gt; 50%) of the players vote for &quot;pickup&quot;,
+KT will set all the players skins to &quot;base&quot;, their color to 0 (white) and their
+team to &quot;&quot; (nothing).&nbsp; For this to work the server has to <strong>not</strong>
+be in Master Mode.&nbsp; If an admin types this command the everyone is automatically set
+to the above.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h3 align="center"><a name="Thanks to">Thanks to</a></h3>
+
+<p align="center">McCoy<br>
+Bannor<br>
+Tomppa<br>
+Zoid<br>
+Strider<br>
+<br>
+Thank you!<br>
+----------<br>
+All members of TSL, JeePster, oKKun, HonK,<br>
+FuN: Agorn - Awful Swede - Haywire - Zevlion - Kurgan,<br>
+Fang, Axu, Perkele, Adze, HellsAngel, Paralyzer,<br>
+Yyrkoon, Descenman, Heksen, CrazyMac, Rodan, oWl,<br>
+Garfield, SLOP, Sister Death, Sandman, Blom,<br>
+Paul Chambers, Thoth, Postman Phat, Zarjazz, Acquiesce,<br>
+Nator, Spin, Zibbo, Frick, CiC , CausticRob J, Amok,<br>
+Jezaja, X-Man, TC-Dade, Deeper, Lion, Jimbob.<br>
+<br>
+A big &quot;thank you&quot; to all you people using the patch as players and/or admins;
+this modification<br>
+has depended on your input and will continue to do so.<br>
+</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+If you wish to comment on this Document or point out any faults then you can contact
+author at :</p>
+
+<p>Cenobite (<a href="mailto:cenobite@barrysworld.com">cenobite@barrysworld.com</a>)</p>
+
+<hr>
+
+<p><a href="#THE TOP OF IT">Click HERE to return to top</a></p>
+
+<h5>Andrew Bell AKA Cenobite.<br>
+Copyright © 1998 . All rights reserved.<br>
+Revised: <!--webbot bot="TimeStamp" startspan s-format="%B %d, %Y" s-type="EDITED" -->August 19, 1999<!--webbot
+bot="TimeStamp" i-checksum="22568" endspan -->.</h5>
+</body>
+</html>

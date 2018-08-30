@@ -1,0 +1,88 @@
+FrikBot MidAir (проект закрыт)
+===================================
+Название	: FrikBot MidAir (fbma)
+Версия		: 1.02
+Дата		: Ноя 13, 2003
+Автор		: ParboiL
+E-mail	: parboil@quakeworld.ru
+URL		: http://www.parboil.quakeworld.ru
+
+
+Описание
+===========
+Quake mod, который комбинирует FrikBot c Kombat Teams (KTPro MidAir).
+
+
+Инсталляция
+============
+Создайте папку Fbma и распакуйте в неё архив.
+
+
+Запуск игры
+================
+Откройте папку fbma и создайте фаил fbma.bat со следующим содержанием:
+---------
+@echo off
+cd..
+qwsv.exe +gamedir fbma
+---------
+Потом запускаете qwcl.exe и соединяетесь к локальному серверу.
+Для игры рекомендую использовать zquake.exe или fuhquake.exe.
+Тогда пишете так:
+---------
+@echo off
+cd..
+(zquake или fuhquake).exe +gamedir fbma
+---------
+
+
+Важные замечания
+================
+Читайте файлы в папке doc для более подробной информации о FrikBot и KombatTeams.
+Если после смерти модель бота становится невидимой используйте "localinfo proxy 1"!
+
+
+Новые команды
+================
+addbot	: добавление бота 
+removebot	: удаление бота
+mid_air	: режим midair
+skillup	: skill + 1
+skilldown	: skill - 1
+
+
+Что нового в этой версии
+==========================
+- Добавлена переменная proxy (для mqwcl и qizmo: невидимый бот после смерти)
+- Исправлена ошибка в FrikBot (mqwcl: исчезала модель игрока после смерти) 
+- Добавлена команда removebot 
+- Добавлена команда addbot 
+- Добавлена команда skilldown 
+- Добавлена команда skillup 
+- Добавлена функция BotPing
+- Добавлена функция BotBreak
+- Добавлена функция BotReady 
+- Исправлена ошибка в FrikBot (оставалась модель игрока после удаления)
+- Добавлена статистика KTPro (MidAir)
+- Добавлен режим MidAir 
+- Скомбинированны FrikBot с KombatTeams
+
+
+Известные ошибки:
+=================
+Модель бота мерцает при localinfo proxy 1
+
+
+Отдельное спасибо
+==================
+Kombat Teams:
+kemiKal (kemikal@kemikal.com)
+cenobite (cenobite@barrysworld.com)
+sturm (silicon@inf.bme.hu)
+fang (tjp@cc.jyu.fi)
+
+FrikBot:
+Ryan "FrikaC" Smith (frika-c@earthling.net)
+
+KTPro:
+rxr (www.ktpro.n3.net)

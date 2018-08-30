@@ -1,0 +1,1738 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFTOFFICE\OFFICE\html.dot">
+   <META NAME="Author" CONTENT="Miklos de Rijk">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Obots1.02</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#33CCFF" VLINK="#CC33CC" ALINK="#FF0000">
+
+<CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>&nbsp;<IMG SRC="omicron2.gif" HEIGHT=156 WIDTH=73><IMG SRC="omicron.jpg" ALT="Stupid Bot Anigif" stupid gif is supposed to be here HEIGHT=156 WIDTH=252></CENTER>
+
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
+<TR>
+<TD VALIGN=TOP WIDTH="50%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Title</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Omicron Bots for Classic
+Quake (or Quake 1) or Quake</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Filename&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Obots102.ZIP</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Version&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">1.02 (final)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Date</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">1998-03-23</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Authors&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#66FF99">Mr. Elusive</FONT><FONT COLOR="#FFFFFF">
+(concept, shell model, Quake C coding &amp; programming)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD>&nbsp;</TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#99FF99">H2SO4</FONT><FONT COLOR="#FFFFFF">
+(concept, cloud model, bottalk, readme)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Email</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="mailto:obots@demigod.demon.nl">obots@demigod.demon.nl</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana">Bot HomePage</FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="http://www.demigod.demon.nl/omibots1.html">http://www.demigod.demon.nl/omibots1.html</A></FONT></TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Contents</FONT></FONT></FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
+<TR>
+<TD WIDTH="50%"><FONT FACE="Verdana"><A HREF="#credits">Credits</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#camperdetection">Camper Detection</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#skinpeople">The Skin People</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#creatingstatic">Creating Static Waypoints</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#betatesters">The Beta testers</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#maprandomizer">Cycle Map &amp; Map Randomizer</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#typeofmod">Type of Mod</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#storystuff">Story Stuff</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#formatofquakec">Format of QuakeC</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#bots">The Bots</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#description">Description of the Modification</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#players">The Players</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#System">System and Other Requirements</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#quakefeatures">Known problems/bugs</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#installing">Installing the Modification</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#troubleshooting">Troubleshooting</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#newconsolecommands">New Console Commands</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#help">Help</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#normalconsolecommands">Server Variables</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#aknowledgements">Acknowledgements and
+thanks</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#administratormenu">Administrator Menu</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#copyright">Copyright and Distribution
+Permissions</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#Rocket Arena">Rocket Arena</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><A HREF="#availability">Availability</A></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><A HREF="#KasCam">KasCam</A></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><A HREF="#Version">Version
+Changes</A></FONT></FONT>&nbsp;</TD>
+</TR>
+</TABLE>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><A NAME="credits"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Credits</FONT></FONT></FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
+<TR>
+<TD WIDTH="30%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">(in no specific
+order)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">ID Software&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Quake and QuakeC(?)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Olivier Montanuy</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">QuakeC Manual v1.0</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Steven Polge&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">for inspiration</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Uwe Girlich&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">the unofficial DEM format
+description v1.04</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Roscoe A. Sincero&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">lots of ideas for the movement
+code and several other points of inspiration; the obot FAQ</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Alan Kivlin&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">for the code to count the
+maximum number of clients and ideas for the GLQuake support</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Meanstryk&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">for beta testing to the
+max, ideas, chat lines, too many things actually</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Greg Howell</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">AKA Axident; Tiggerskin
+(+ for giving permission).</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Tigger Clan</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">for giving permission to
+us to use their tiggerskin.&nbsp; <A HREF="mailto:maxwells@ihug.co.nz">maxwells@ihug.co.nz</A>&nbsp;&nbsp;
+(Richard "Jodi" Maxwell)</FONT></FONT> <FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><A HREF="http://homepages.ihug.co.nz/~maxwells/jodi/tiggers/tiggers.html">http://homepages.ihug.co.nz/~maxwells/jodi/tiggers/tiggers.html</A></FONT></FONT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Luke Pope</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Cowboy Skin (+ for giving
+permission)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Alan Yen</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Mountie, Punisher and Ironman
+skin (+ giving permission).</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Kenneth Scott&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">AKA The Dire Proto-Fiend;
+skins of Carmack, Qspy, Iceman, Klingon, Terminator, Predator, Robocop,
+Hitman and Babe, the best head gib ever made, plus parts of the Slaine
+skin, a well as the Demigod gun (hey...its a cool gun). (+ for giving permission
+AND finding a certain name error)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Tim Willits</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">For his own skin ;)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Mike McMillen</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">AKA Judge Dredd; Slaine
+skin &amp; Happy Slappy skin (+ for giving permission)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Elver</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Bill Gates' Microsoft Skin
+(using base skin) &amp; Demigod skin</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Okkun</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Sven's Swemob Skin</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Gavin Suntop</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The Tick's lines, taken
+from TV/comics. The Tick one-liners: <A HREF="http://www.cu-online.com/~phyber/tick/tickpage.html">http://www.cu-online.com/~phyber/tick/tickpage.html</A></FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">James Kennison</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">For the great, the fab the
+one and only ELVIS skin (yep, the King is still alive!!!) (+ for giving
+permission)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Itchiban</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Turtle skin</FONT></FONT></TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P><A NAME="skinpeople"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>The
+Skin People</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">(Who did us a favor, but
+don't expect that they will make your skin!!! Some might if you ask them
+nicely)</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">I consider these people to
+have made the best CQ skins in the world, and that is the truth...it is
+the truth that that is my opinion...at this time.... Don't know what my
+opinion is when you read this...Heheh.</FONT> Last version I "copulated
+in a vertical fashion"(=fucked up). I got some of the links wrong....will
+saying sorry be enough? errare est humanum. Anyway, some sites may still
+be working, some may be down. James stopped making skins, Elver is too
+busy doing other stuff</FONT>.
+
+<P>&nbsp;
+<BR>&nbsp;
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=7 WIDTH="100%" >
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">James Kennison</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="23%"><FONT FACE="Verdana"><A HREF="mailto:jamesk@mylink.net">jamesk@mylink.net</A><FONT COLOR="#FFFFFF">&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="63%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><A HREF="http://www.mylink.net/~jamesk/skinsbyjames/">http://www.mylink.net/~jamesk
+/skinsbyjames/</A></FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Greg Howell</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="23%"><FONT FACE="Verdana"><A HREF="mailto:howellg@ihug.co.nz">howellg@ihug.co.nz</A><FONT COLOR="#FFFFFF">&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="63%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><A HREF="http://homepages.ihug.co.nz/usersdirs/howellg">http://homepages.ihug.co.nz
+/usersdirs/howellg</A> (no access)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Luke Pope</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><A HREF="mailto:lupope@epoch.ml.org">lupope@epoch.ml.org</A><FONT COLOR="#FFFFFF">&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><A HREF="http://epoch.ml.org/pope/qskins.html">http://epoch.ml.org/pope/qskins.html&nbsp;</A></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP WIDTH="14%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Alan
+Yen</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="23%"><FONT FACE="Verdana"><A HREF="mailto:alanyen@planetquake.com">Alanyen@planetquake.com</A><FONT COLOR="#FFFFFF">&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="63%"><FONT FACE="Verdana"><FONT SIZE=+0><A HREF="http://www.planetquake.com/qgallery/">http://www.planetquake.com/qgallery/</A></FONT><FONT SIZE=-2>&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP WIDTH="14%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Kenneth
+Scott</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="23%"><FONT FACE="Verdana"><A HREF="mailto:mfarr@ccinet.ab.ca">mfarr@ccinet.ab.ca</A><FONT COLOR="#FFFFFF">&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="63%"><FONT FACE="Verdana"><A HREF="http://planetquake.com/skinforge/">http://planetquake.com/skinforge/</A></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP WIDTH="14%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Mike
+McMillen</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="23%"><FONT FACE="Verdana"><A HREF="mailto:mike.mcmillen@sierra.com">mike.mcmillen@sierra.com</A><FONT COLOR="#FFFFFF">&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP WIDTH="63%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><A HREF="http://www.tigerbass.com/lojindex.htm">http://www.tigerbass.com/lojindex.h
+tm</A></FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Elver</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><A HREF="mailto:Nobody@demigod.demon.nl">Nobody@demigod.demon.nl</A></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><A HREF="http://www.demigod.demon.nl/">http://www.demigod.demon.nl</A>...hey
+this site looks familiar....</FONT></FONT></TD>
+</TR>
+</TABLE>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+<BR>&nbsp;
+
+<P><A NAME="betatesters"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>The
+Betatesters</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The Omicron bot would never
+have reached this point without these guys! Many thanks to them.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Legion (Roscoe A. Sincero)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Meanstryk (Brian Bland)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">eXorcist (Maarten Winkel)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">OoXoO (Brian Hetro)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Wilfred Death(?)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Mr?(Timm Stokke)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Strider(Alan Kivlin</FONT></FONT>.)
+<BR>&nbsp;
+
+<P><A NAME="typeofmod"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Type
+of Mod</FONT></FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">QuakeC: no</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Sounds: yes</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Models: yes</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><A NAME="formatofquakec"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Format
+of QuakeC</FONT></FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">unified diff: no</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">context diff: no</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">.qc files: no</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">progs.dat: yes (for CQuake
+v1.06 or later)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">qwprogs.dat: no, and Mr
+E. is not planning on doing a QW port either.</FONT></FONT>
+<BR>&nbsp;
+
+<P><A NAME="description"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Description
+of the Modification</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">This quake add-on contains
+the following features (and probably a lot more):</FONT></FONT>
+<UL>
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Dynamic level learning</FONT><FONT COLOR="#FFFFFF">:
+The omicron bots can quickly learn any level, and remembers where things
+are as it plays... Try it on a level you don't know, and the bot will know
+the level "by heart" before you figure out how to get from A to B. Once
+the bot has "learned" a level, you can easily take that knowledge and put
+it into the BSP itself. From then on, the bot won't have to relearn that
+level; it will know it from the start.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Optional anti-camper feature</FONT><FONT COLOR="#FFFFFF">;
+This enables you to weed out all those happy outdoor type people. Make
+the rain fall...yeah.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Advanced routing</FONT><FONT COLOR="#FFFFFF">:
+Not only does it remember where things are, but it also can plot the shortest
+route to them, taking into account existing teleporters. It can find enemies
+in a similar fashion; if it knows where you are, it might come and make
+a visit.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Hearing</FONT><FONT COLOR="#FFFFFF">:
+The omicron bot can actually "hear" and "understand" some of the sounds
+around it. If the obot hears you pick something up, for instance, it might
+figure out where you are. If it does, it might very well decide to come
+over and put you in backpack mode.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Pursuit AI</FONT><FONT COLOR="#FFFFFF">:
+Using its advanced (AI SPRUCE) routing, the omicron bot can be a hard tail
+to shake. Not only can it chase you down, but it can sometimes use existing
+map features to actually cut you off at the pass.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Fuzzy logic</FONT><FONT COLOR="#FFFFFF">:
+The bot uses fuzzy logic in it's AI. It isn't as impressive as it sounds,
+or so Mr. E. tells me. This allows it an amount of flexibility when making
+decisions and allows those decisions to appear much more intelligent.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Team Support</FONT><FONT COLOR="#FFFFFF">:
+Not only does the obots support teamplay, it actually supports teamplay
+with multiple teams!</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Individualized characters</FONT><FONT COLOR="#FFFFFF">:
+There are 24 different bots, each with its own respective skin and phrases.
+You can either choose to load up a random character, or if you have a favorite
+bot, you can ask for it by name.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Bot-Cam</FONT><FONT COLOR="#FFFFFF">:
+The omicron bot provides an observer mode that allows you to see through
+the eyes of a client (i.e. bot or player) of your choice, or to follow
+him in "supersmooth chase-cam"(tm) mode.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Deathmatch 3 and 4</FONT><FONT COLOR="#FFFFFF">.
+(love dm3..still don't know about dm 4)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#00FFFF">Optional powerup/weapon removal</FONT><FONT COLOR="#FFFFFF">;
+The admin can optionally bar the use of of the quad, pentagram(or 666 as
+I like to call it), invisibility and several of the weapons as he/she sees
+fit.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Randomize maps and cycle maps</FONT><FONT COLOR="#FFFFFF">
+feature, which makes you jump around quake maps (and other custom maps)
+to your own liking, ignoring those you hate and dispize (maps, not people
+that is).</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Several difficulty levels for
+the bots</FONT><FONT COLOR="#FFFFFF">; from skill 0 to 3. Actually the
+difficulty is for you, the player. The higher their skill, the easier you
+are to kill.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#00FFFF">RocketArena</FONT><FONT COLOR="#FFFFFF">!!!
+See <A HREF="http://planetquake.com/servers/arena/">http://planetquake.com/servers/arena/</A>
+for more detailed information (it's RA 1 B.T.W.).</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#66FFFF">Hardcoded waypoints for all
+deathmatch levels of the original Quake</FONT><FONT COLOR="#FFFFFF">. So
+it saves you the time of making your own crummy BSP waypoints and then
+complaining to us that the bots suck. Which we already know....so try and
+make a better bot yourself..from scratch...HA!!! (Note: this editorial
+was not put here by Mr E., who wishes to apologize for the entire contents
+of this readme)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><B><FONT COLOR="#FF6666">ROCKETJUMPING</FONT></B><FONT COLOR="#FFFFFF">!!!!
+(I heard that some of the Beta testers themselves were whining over this
+bit for weeks..this is why it was included last...it had a priority of
+1; 0 means...we're not going to do anything about it).</FONT></FONT></LI>
+</UL>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+<BR><A NAME="System"></A><FONT FACE="Verdana"><FONT COLOR="#FF9900"><FONT SIZE=+1>System
+and Other Requirements</FONT></FONT></FONT>
+<BR>&nbsp;
+<UL>
+<LI>
+<FONT FACE="Verdana">newbies to computers: we assume that the typical user
+knows such things as "command line", "parameters", "directory" ,and all
+that..if you don't, go out there and familiarize yourself with it...we
+do not want to be your teachers.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">newbies to quake: read the quake manual on what and
+how Quake specific settings work out. You need to know what a multiplayer
+game is, the console, how to activate it..etc.. We simply don't want any
+mail on this subject. You (presumably) bought the game, we assume it is
+your duty to read all it's manuals...or we will put you on "the Black List".</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">newbies to bots: there was supposed to be a Faq about
+CQuake bots, but is does not exist.....too bad.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">the game called Quake from id. I will refer to it
+as Classic Quake (CQuake)</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">a sense of humor, alternatively, if you haven't got
+it (humor that is), don't complain about "stupid skins/ stupid chats" we
+made the damn thing...if you don't like it..here's your money back...go
+play another bot.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">a computer that runs CQuake with a minimum of 16 MB
+(sorry MACers, we haven't got the faintest idea what type of MAC you need
+to run this...we presume that a MAC Classic is out of the question)</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">recommended: Pentium 166 MHz with 32 MB or comparable
+computer; if you have a less 'formidable' system, you will have a slow
+game with lots of lag. Don't cry, don't whimper...if you play on the internet,
+you also have lag. See it as a challenge...or buy a better system with
+your hard earned cash. If you want all the bots in play with NO lag at
+all, get a Pentium II, 666 MHz with 64 MB, but be able to configure it
+yourself...if the bot is still slow then...optimize your computer or buy
+a playstation. QuakeC makes the bots slow...our code is optimized, in theory.</FONT></LI>
+</UL>
+&nbsp;
+
+<P><A NAME="installing"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Installing
+the Modification</FONT></FONT></FONT>
+<UL>
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">create a subdirectory in your
+CQuake directory. (if E:\QUAKE is your CQuake directory you could create
+E:\QUAKE\OMICRON)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">copy the contents of the zip
+file (including the subdirectories) into the created directory.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">start CQuake with the command-line
+parameter "</FONT><FONT COLOR="#FFFFCC">-game</FONT><FONT COLOR="#FFFFFF">"
+followed by the name of the directory where the omicron bot is located
+(for example: </FONT><FONT COLOR="#FFFFCC">e:\quake\quake -game omicron</FONT><FONT COLOR="#FFFFFF">)
+(IMPORTANT NOTE: all letters in the parameters </FONT><B><FONT COLOR="#FF6666">MUST</FONT></B><FONT COLOR="#FFFFFF">
+be </FONT><FONT COLOR="#99FF99">lowercase</FONT><FONT COLOR="#FFFFFF">,
+or Quake will ignore them) Remember that you need to start a server to
+enable the bots. This can be accomplished while the game is running, or
+by adding the '</FONT><FONT COLOR="#FFFFCC">-listen 16</FONT><FONT COLOR="#FFFFFF">'
+for 16 clients&nbsp; (for example, you can use other values, up to 16);
+the line would become '</FONT><FONT COLOR="#FFFFCC">e:\quake\quake -game
+omicron -listen 16</FONT><FONT COLOR="#FFFFFF">'</FONT></FONT></LI>
+</UL>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+<BR><A NAME="newconsolecommands"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>New
+console commands</FONT></FONT></FONT>
+<CENTER>&nbsp;</CENTER>
+&nbsp;
+<CENTER><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
+<TR>
+<TD VALIGN=TOP WIDTH="30%"><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">addbot</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">add one random
+bot </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana">admin</FONT></TD>
+
+<TD><FONT FACE="Verdana">nominate yourself for administrator</FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">botpathing</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle bot to
+learn the map by itself (default=on) </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana">bottalk</FONT></TD>
+
+<TD><FONT FACE="Verdana">toggle bot chatting (default=on)<FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">botskills&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">print the skills
+of the bots</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">camname</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle name of
+client observer is viewing from</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">campmode</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">set the camping
+mode (default=detect and punish) </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">chasecam</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle between
+eyecam and chasecam</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">cmdlist</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">show a list of the console
+commands</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">cyclecam</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">cycle the camera
+to the next bot or player</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">dumpbspwaypoints</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">dump the waypoints
+to the console </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">humanpathing</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle bot to
+learn the map from player (default=on) </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">kascam</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle KasCam mode (KasCam
+impulse commands will work when activated)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">menu&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">show administrator
+menu </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">nogrenade&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle the grenade
+launcher on/off </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">nolightning</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle the thunderbolt
+on/off </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">nopowerups&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle the 666,
+the quad and invisibility powerup on/off </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">norocket</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle the rocket
+launcher on/off </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">noshellcases</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle the shotgun shell
+cases on/off </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">nosupernail</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle the super
+nailgun on/off </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">noweapons</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle all weapons on/off
+</FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">observer</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle observer
+mode on/off</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">observerfly</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">toggle between
+flying or walking in observer mode (<A HREF="#troubleshooting">troubleshooting</A>)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">removeallbots</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">remove all the
+bots </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">removebot</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">remove one bot
+</FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">rocketarena</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">switch to rocket arena mode
+</FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">serverflags</FONT></FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">show several server settings</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">skindown&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">cycle through
+the skins downward</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">skinup&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">cycle through
+the skins upward</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">stopadmin&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">exit the administrator
+function </FONT><FONT COLOR="#FFCC99">*</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">team1 - team8</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">join the specified
+team</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana">yes</FONT></TD>
+
+<TD><FONT FACE="Verdana">vote yes for administrator candidate</FONT></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFCC99">* only the administrator
+can utilize this command with success.</FONT></FONT>
+
+<P><FONT FACE="Verdana">The administrator is the first client to log on
+to the dedicated server or the client on the listen server...</FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Specific bots can be added
+by typing in the name of the bot on the console.</FONT> Since the limits
+of Quake dictate that there can only be 16 clients maximum, you can only
+ask for 15 bots maximum</FONT>.
+<CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">These are:</FONT></FONT></CENTER>
+
+<CENTER>&nbsp;</CENTER>
+
+<CENTER>&nbsp;</CENTER>
+&nbsp;
+<CENTER><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=4 WIDTH="500" >
+<TR>
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">demigod</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">john</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">bill</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">tick</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">terminator</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">tigger</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">ironman</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">predator</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">sven</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">raphael</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">bob</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">qspy</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">iceman</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">happy</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">tim</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">elvis</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">robocop</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">cowboy</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">hitman</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">mountie</FONT></FONT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">babe</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">punisher</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">slaine</FONT></FONT></TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">klingon</FONT></FONT></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;
+<BR><FONT FACE="Verdana">see <A HREF="#bots">the Bots</A> for a description
+of each.</FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">&nbsp;</FONT></FONT>
+
+<P><A NAME="normalconsolecommands"></A><B><FONT FACE="Verdana"><FONT COLOR="#FF8000">Server
+Variables</FONT></FONT></B>
+
+<P>&nbsp;
+<CENTER><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=7 WIDTH="800" >
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">skill</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">sets the skill
+of the bot 0-3. Note that you can set this variable with .1 increments.
+It is thus possible to play against skill 2.5 bots for example.</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">deathmatch n&nbsp;</FONT></FONT></TD>
+
+<TD VALIGN=TOP><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">sets the dm mode
+to dm n.</FONT>&nbsp;</FONT>&nbsp;
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">dm 3 (weapons remain and
+can be picked up once; ammunition returns after 30 seconds)</FONT>&nbsp;</FONT>&nbsp;
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">dm 4 (all players have all
+weapons, all ammo, 250 health, 200 armor, backpacks also give +10% health;
+quad does octa damage; more than 300 health =health 100, plus one gets
+quad and 666)</FONT></FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana">maxplayers</FONT></TD>
+
+<TD><FONT FACE="Verdana">To adjust the maxplayer setting, first type '<FONT COLOR="#FFFFCC">disconnect</FONT>',
+then type '<FONT COLOR="#FFFFCC">maxplayers n</FONT>' where n is the maximum
+number of player/bots allowed in the game; Quake will allow 16 clients
+max. then you can continue by typing '<FONT COLOR="#FFFFCC">map e1m2</FONT>'
+or '<FONT COLOR="#FFFFCC">map dm4</FONT>' for example.</FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana">registered 2</FONT></TD>
+
+<TD><FONT FACE="Verdana">the patch does not load the models supplied with
+the bots; this is for low performance/memory systems</FONT></TD>
+</TR>
+
+<TR>
+<TD><FONT FACE="Verdana">samelevel</FONT></TD>
+
+<TD><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">specify the number of maps.
+see </FONT><A HREF="#maprandomizer">Cycle Map &amp; Map Randomizer</A></FONT></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Verdana">Note: one can also set these server variables
+from the command-line. For instance one might start CQuake with the following
+parameters: quake -game omicron -listen 16 -winmem 16 +registered 2 +deathmatch
+3 +skill 3 +map dm1</FONT>
+
+<P><A NAME="administratormenu"></A><B><FONT FACE="Verdana"><FONT COLOR="#FF8000">Administrator
+Menu</FONT></FONT></B>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The administrator menu (from
+console: </FONT><FONT COLOR="#FFFFCC">menu</FONT><FONT COLOR="#FFFFFF">)
+enables the administrator to change several settings. Select options by
+entering the number preceding the menu item. (or by typing impulse, followed
+by that number on the console). See also: <A HREF="#troubleshooting">Troubleshooting</A></FONT></FONT>
+<CENTER><FONT FACE="Verdana"><FONT COLOR="#FF6666">Administrator Menu</FONT></FONT></CENTER>
+
+<CENTER><IMG SRC="administ.jpg" administrator screenshot HEIGHT=93 WIDTH=159></CENTER>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Deathmatch: off, 1 to 4</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Teamplay: off (so there
+is no teamplay) or 1 through 8 (equals the number of teams)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Skill: 0 through 3</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Timelimit: off, 0 to 60,
+increments of 5</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Fraglimit: off, 0 to 100;
+increments of 10</FONT></FONT>
+<CENTER><FONT FACE="Verdana"><FONT COLOR="#FF6666">Team Selection Menu</FONT></FONT></CENTER>
+
+<CENTER><IMG SRC="select.JPG" select.jpg..can't leave home without it HEIGHT=94 WIDTH=168></CENTER>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">By entering 1, 2 up to n where
+n is the console setting for teamplay, one enters the specific team menu.
+Here bot(s) can be added to that specific team. Up to 16 clients (=bots
+and/or players) total can be added (such is the limit of Quake). Although
+the bots are meant to train people for deathmatch games, Mr. Elusive had
+one of those brilliant ideas of his and built in teamplay.</FONT></FONT>
+<CENTER><FONT FACE="Verdana"><FONT COLOR="#FF6666">Botmanagement Menus</FONT></FONT></CENTER>
+&nbsp;
+<CENTER><TABLE BORDER=0 COLS=2 WIDTH="200" >
+<TR>
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FF6666">Deathmatch
+Menu</FONT></FONT>&nbsp;</TD>
+
+<TD ALIGN=CENTER><FONT FACE="Verdana"><FONT COLOR="#FF6666">Team n Menu</FONT></FONT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%"><IMG SRC="death.JPG" death.jpg is supposed to be here HEIGHT=76 WIDTH=167></TD>
+
+<TD><IMG SRC="team.JPG" team.jpg is supposed to be here HEIGHT=69 WIDTH=160></TD>
+</TR>
+</TABLE></CENTER>
+&nbsp;<FONT FACE="Verdana">Players can enter a specific team by typing
+'<FONT COLOR="#FFFFCC">team n'</FONT> on the console where <FONT COLOR="#FFFFCC">n</FONT>
+is the number of the team they want to join.</FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Before joining a specific
+team, the game must be stopped (see administrator menu), after everyone
+has chosen a team and the bots have ben added, the game can be started.</FONT>
+Teams disappear when the map is changed, see<FONT COLOR="#FFFFFF"> <A HREF="#troubleshooting">Troubleshooting</A></FONT></FONT>.
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">(I assume you can find out
+for yourself how to operate the rest of the @#!^&amp;*!! menu, after all,
+you managed to get out of bed, didn't you? and you're reading this, aren't
+you?) nuff said (Actually, no...there are still hundreds of idiots out
+there...and you know who you are!!! Hey, it takes one to know one...I can
+spot one within DBS range :)&nbsp;</FONT></FONT> )
+
+<P><A NAME="Rocket Arena"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Rocket
+Arena</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Yeah, Yeah, Mr.E. implemented
+RocketArena into the Obots. Here's how it works...</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Copy the Omicron bot progs.dat
+to your Rocket Arena directory.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Start Quake with your regular
+Omicron bot parameters and '</FONT><FONT COLOR="#FFFFCC">-registerd 2</FONT><FONT COLOR="#FFFFFF">'.
+You need to change the -game parameter to the Rocket Arena directory. For
+instance '</FONT><FONT COLOR="#FFFFCC">-game arena</FONT><FONT COLOR="#FFFFFF">'.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">When the game is started
+go to the map you want to play and type '</FONT><FONT COLOR="#FFFFCC">rocketarena</FONT><FONT COLOR="#FFFFFF">'
+on the console.</FONT></FONT>
+
+<P><A NAME="KasCam"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>KasCam</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The KasCam can be toggled
+with the console command "kascam". After the KasCam has been enabled you
+can't use any of the bot console commands. See the original KasCam <A HREF="Kc18doc.txt">readme</A>
+for details and KasCam impulse commands.</FONT></FONT>
+
+<P><A NAME="camperdetection"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Camper
+Detection</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The camper detection feature
+is unlike the patches that just check if a player is standing motionless.
+The player is allowed to stand motionless and type messages. The feature
+checks if someone is camping near an interesting item (rocket launcher,
+red armor etc.), and when a suspected camper is detected every player receives
+a message with the name and location of the camper. This is followed by
+a 2nd message if the culprit still plies his "outdoor hobby". The camper
+receives a personal warning and eventually the camper will be punished.
+There are several punishments; some bad, some worse, some real funny (to
+others that is) including a mischievous cloud that follows the camper and
+lights up his day ;) (now you know what that stupid cloud model is for).
+The default mode is "detect &amp; punish", but there is a "detect with
+severe punish" mode, and a "detect only" mode as well. It is also possible
+to disable both detection and punishment.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><A NAME="creatingstatic"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Creating
+BSP Waypoints</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">BSP waypoints are needed
+for the bots to find their way in a given map. All deathmatch levels (DM
+1 to 6) are already hardcoded as an added bonus (and because I kept on
+whining about it to Mr E....hihi). Making&nbsp; BSP Waypoints for other
+maps can be accomplished&nbsp; as follows; A player explores a given map
+each time before bots are added, or it can be done once, then saved in
+a file on hard disk. In order to accomplish the latter, the following commands
+must be executed:</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Start Quake with the following
+extra command-line parameter:</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFCC">quake.exe </FONT><FONT COLOR="#FFCC99">-condebug</FONT><FONT COLOR="#FFFFCC">
+-game omicron -listen 8</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Now load the map to create
+the BSP waypoints for. Try to walk through the whole map [no camping trips
+this time ;)].</FONT></FONT> <FONT FACE="Verdana"><FONT COLOR="#FFFFFF">After
+playing this map for a while, dump the waypoints to the console. This can
+be accomplished by typing '</FONT><FONT COLOR="#FFFFCC">dumpbspwaypoints</FONT><FONT COLOR="#FFFFFF">'.
+Quit Quake and take a look at the QCONSOLE.LOG that can be found in the
+omicron bot directory. All text not between braces {} must be removed.
+Take the .ENT file of the map. (cut the entities from the .BSP file with
+wordpad or a similar word-processor if there isn't a .ENT file.) Paste
+what is left of the QCONSOLE.LOG at the end of the .ENT file. To create
+the new .BSP file with static waypoints use QBSP.EXE (by id) with the following
+command-line parameter:</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFCC">qbsp -onlyents ?.ent</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">where </FONT><FONT COLOR="#FFFFCC">?</FONT><FONT COLOR="#FFFFFF">
+stands for the name of the map (which must be the same as the filename
+of the .ENT file). The map is now ready to be played again, and the bots
+do not have to "learn" the map, as they will "know" everything already.</FONT>
+See also <A HREF="#quakefeatures">CQuake Features</A>.</FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><A NAME="maprandomizer"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Cycle
+Map &amp; Map Randomizer</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">This feature enables one
+to specify up to 64 maps in a configuration file on the server. The bot
+add-on will either randomly choose a map from these or cycle through them
+in order of appearance. When randomizing maps there are always three different
+maps in a row (assuming you specified more than three maps).</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">You can specify a map by
+making an alias with the name '</FONT><FONT COLOR="#FFFFCC">mapX</FONT><FONT COLOR="#FFFFFF">',
+where </FONT><FONT COLOR="#FFFFCC">X</FONT><FONT COLOR="#FFFFFF"> implies
+an integer in the range 1-64, that executes '</FONT><FONT COLOR="#FFFFCC">changelevel
+mapname</FONT><FONT COLOR="#FFFFFF">' where '</FONT><FONT COLOR="#FFFFCC">mapname</FONT><FONT COLOR="#FFFFFF">'
+is the name of the map to be played.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">For instance, one might
+create the following alias:</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFCC">alias map13 "changelevel
+dm3"</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">With the server variable
+'</FONT><FONT COLOR="#FFFFCC">samelevel</FONT><FONT COLOR="#FFFFFF">' one
+can specify the number of maps. Make sure all the aliases with the name
+'</FONT><FONT COLOR="#FFFFCC">map1</FONT><FONT COLOR="#FFFFFF">' through
+'</FONT><FONT COLOR="#FFFFCC">mapX</FONT><FONT COLOR="#FFFFFF">' are made
+where X implies the number of maps.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Setting '</FONT><FONT COLOR="#FFFFCC">samelevel</FONT><FONT COLOR="#FFFFFF">'
+to 0 will play the original CQuake story line.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">When '</FONT><FONT COLOR="#FFFFCC">samelevel</FONT><FONT COLOR="#FFFFFF">'
+is equal to 1 the current map will be played forever (broken record effect).</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Setting '</FONT><FONT COLOR="#FFFFCC">samelevel</FONT><FONT COLOR="#FFFFFF">'
+to a negative value will enable map cycling of the given number of maps
+(i.e. play the same sequence of maps over and over).</FONT></FONT>
+<BR>&nbsp;
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><A NAME="storystuff"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Story
+Stuff</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana">Mr. Elusive is much better at CQuake than me...simply
+because he spends more time behind the computer playing Doom and CQuake
+and another unnamed 3D game with royalty in it. Me, well, I've less spare
+time. So we came up with this training scheme and how it should work to
+enable me (H2SO4) and the other Clan members (who are worse than me) to
+get better at quake and get better results on the internet, so as to defend
+the reputation of Clan Omicron.(...which still sucks as of this writing,
+but we're getting better...). Rather than keep this for our clan, we decided
+to share the bot with the rest of the world. We loved the reaper...but
+it is too much of a bot. With Omicron, we wanted to create a bot that was
+more human-like in it's qualities; If you were playing on the internet
+or LAN, including skins, taunts and the like. <FONT COLOR="#FFCCCC">It
+is the way WE like deathmatch</FONT>.</FONT>
+<BR><FONT FACE="Verdana">So here it its...</FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Welcome to </FONT><FONT COLOR="#99FF99">Omicron's
+Basically Obscure Training Scheme</FONT><FONT COLOR="#FFFFFF"> (OBOTS).
+Your mission, should you decide to accept, is to kill any- and everybody
+until you have acquired enough skill to challenge </FONT><B><I><FONT COLOR="#FF6666">real</FONT></I></B><FONT COLOR="#FFFFFF">
+persons(tm) over a LAN for a duel in quake. And will they be surprised
+by the way your skill has improved. Then you will be surprised. Because
+they have also downloaded this bot and improved their skill. Or perhaps
+they were so expert at quake they're already at the top, in which case
+you know they are bigger nerds than you thought they were.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">For this particular training
+mission, we've selected a few good men and digitized them (turned them
+into bots). Again, the mission of the game is not to kill Shub-Niggurath
+or Quake or the Cyberdemon...no, it's far easier than that. Just kill anything
+and everything you see...unless you are in teamplay mode, in which case
+you should kill anything and everything in sight AND have a few macro's
+handy such as "sorry", "oops, I didn't realize it was you", "oh yeah, you
+have got my color", "I thought I was on team red", etc.</FONT></FONT>
+<BR>&nbsp;
+
+<P><A NAME="bots"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>The
+Bots</FONT></FONT></FONT>
+<BR>&nbsp;
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">1.</FONT><FONT COLOR="#FF6666">Omicron
+Demigod</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">It's the demigod. She/he/it?
+is the&lt;snipped the long boring story etc...>.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Nuff Said.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">2.</FONT><FONT COLOR="#FF6666">John
+Carmack</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Yes, kidnapped from id Software
+himself. Why else did it take so long before Quake II was released?</FONT>&nbsp;
+Last time I put down John Romero, to see if anyone noticed, but nobody
+did except the Dire Proto-Fiend (Kenneth Scott). Go figure, nobody except
+a few really know who does what, where, why and how. :(</FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">3.</FONT><FONT COLOR="#FF6666">Bill
+Gates</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">We said, "how about it,
+Bill?". "No" he said. "It will give you an opportunity to see what OS is
+on the local hard drive and transmit this information back to Microsoft.com".
+"Nah, still not interested".</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">"You could advertise Internet
+Explorer freely to whomever is playing by chatting".</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">"OK, I'm in."</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">4.</FONT><FONT COLOR="#FF6666">Happy
+Slappy</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Da man to put a smile on
+yer face...or he ain't happy and he'll slapp-y. Happy Slappy's favorite
+rhyme goes like this (by Mike McMillen, who actually was Happy Slappy,
+he is now known as Judge Dredd):</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">(: HAPPY SLAPPY :)</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">I kill you. You kill me</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">I killed yer whole damn
+family</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">With a big fat Rocket and
+a shot from me to you</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Won't you say you'll kill
+me too?</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">5.</FONT><FONT COLOR="#FF6666">Terminator</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">It is a T500. And again,
+for each one you gib, there is a new T500 waiting to gib you. Still haven't
+adjusted that voice chip to get rid of the accent...</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">6.</FONT><FONT COLOR="#FF6666">Tigger</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The hero from Winnie the
+Pooh. With a punch (pounce?) to make all cadets wish they hadn't joined
+the OBOTS.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">7.</FONT><FONT COLOR="#FF6666">Ironman</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Tony Stark has specifically
+asked to join our ranks, seeing his star fade fast while another bat-eared
+playboy makes movie after movie.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">8.</FONT><FONT COLOR="#FF6666">Predator</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">This guy doesn't say much.
+He just wants to collect trophies.</FONT> Actually, he wanted to join the
+Head Hunters TC, but we told him he could indeed collect, but he would
+have to relinquish his trophies in order to get the frags...so no deal
+there.</FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">9.</FONT><FONT COLOR="#FF6666">Sven</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Because our extensive project
+is funded by the Swedish mob, we had to include one of their controllers
+to see the money was well spent. (Hey, I mean, we do have to pay for caterers
+and the costumes and the campers (no not the quake type, the caravan type)
+where the bots sleep while you turn off your PC...)</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">10.</FONT><FONT COLOR="#FF6666">Raphael</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">One of the Teenage Mutant
+Ninja Turtles(tm). We told him "One pizza for each frag."; Cowabunga!</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">11.</FONT><FONT COLOR="#FF6666">Bob</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Some say Bob is one of the
+actors who once played in an episode from TAXI. He needed the job. Some
+say he's from the movie Taxi Driver (I think) ....so it must be....Robert
+deNiro!!!</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">12.</FONT><FONT COLOR="#FF6666">Qspy</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Qspy is everywhere ...better
+than spycatcher, better than Bond...with a licence to gib.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">13.</FONT><FONT COLOR="#FF6666">Iceman</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">This skin is supposed to
+dress up the Ice Clan, such **</FONT><FONT COLOR="#66FF99">gasp</FONT><FONT COLOR="#FFFFFF">**
+beautiful skin....we had to use it!!</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">14.</FONT><FONT COLOR="#FF6666">The
+Tick</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">"Dinner's great! I especially
+like how you cut up my hot dogs to look like octopi". "But what this feast
+needs, Arthur, is PEZ" and "I'm not a villain lady, I'm vanilla" and "The
+Fourth Dimension is just one big crazy do not enter clambake jungle of
+weirdity -- and how does it work? Never mind!"</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">TV Reporter: "Can you blow
+up the Earth with your mind?"</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The Tick: "I hope not, that's
+where I keep all my stuff!"</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">15.</FONT><FONT COLOR="#FF6666">Tim
+Willits</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Tim said he knew his own
+levels so well he could kick anyone's butt he was up against...I mean had
+to DM against...yeah that's it.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">16.</FONT><FONT COLOR="#FF6666">Slaine</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Slaine Mac Roth...the Celtic
+Scourge...Brainbiter included. No peaceful DEATHS ...heh heh heh!!!</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">17.</FONT><FONT COLOR="#FF6666">Robocop</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Robocop has gone haywire...dead
+or alive....you're history....You're all carrying illegal fire arms..surrender
+them or die.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">18.</FONT><FONT COLOR="#FF6666">Cowboy</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">This flea' bitten, leather
+slappin' varmit is the meanest, roughest, toughest gunslinger east, west,
+north, and south of the river Pecos!</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">19.</FONT><FONT COLOR="#FF6666">Hitman</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Hey! you're actually reading
+this shit...man go play the bots...get a life, read a book, whatever.....so
+I didn't put this mumbojumbo here fer nothin'....hihi... U understanda
+mi...U bin in da biga 'ouse? What U in da bigga 'ouse 4 heh? U wanna weara
+di concrete shoes?</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">20.</FONT><FONT COLOR="#FF6666">Mountie</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Yes, its a mountie to the
+rescue. Unfortunately, he's no Mountie, 'cause he'll gib you anyway. But
+a damn fine uniform!</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">21.</FONT><FONT COLOR="#FF6666">Babe</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Ok, we needed a female bot
+as well. In quake 2 we'll include more chicks (no offense ladies, the demigod
+is actually a demigoddess you see) if we can get the skins...cause female
+skins that look good are about as abundant as the number of Bill Gates'
+x-mas greeting cards sent to Larry Ellison (Nerd pun here).</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">22.</FONT><FONT COLOR="#FF6666">Punisher</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">What's a guy to say...punish
+everybody...that's what he's here for...excellent skin....</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">23.</FONT><FONT COLOR="#FF6666">Elvis
+Presley</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">From beyond the grave he
+returns like a bad rerun. Yes folks, it's the only king of rock and roll.
+Now go tell your mommy that you've seen Elvis....and gibbed him countless
+of times, you hound-dog you!</FONT></FONT>
+<BR>&nbsp;
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">24.</FONT><FONT COLOR="#FF6666">Klingon</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">We kidnapped this one from
+the Paramount studios. We think his name is K'Tesh and he doesn't speak
+the stupid Federation language. His universal translator was damaged while
+testing the rocket launcher. His favorite line seems to be "tlhlngan Hol
+Dajatlh'a'", whatever that means.</FONT></FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><A NAME="players"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>The
+Players</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">You. :)</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><A NAME="quakefeatures"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Known
+problems/bugs</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">So don't mail us about these!!!</FONT></FONT>
+<UL type="disc">
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Large maps cannot entirely be
+mapped with waypoints, because waypoints are entities, and quake supports
+but limited number of these (about 500 I heard Mr E. say). (you know, the
+world is an entity, you are an entity, a health pack is an entity, Shub-Niggurath
+is a dangerous entity etc.)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Quake can only handle 16 clients;
+that is 16 bots or 15 bots and 1 player, 14 bots and 2 players..etc...so
+you can't have all the bots in the game at the same time!</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Lava error on map </FONT><FONT COLOR="#FFFFCC">E3M6</FONT><FONT COLOR="#FFFFFF">
+under the elevator near the end..you don't get continual damage if you
+stand in the lava..you get a bit of damage as you jump in and out, but
+not if you stand still/ move around.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">BSPwaypoints do not work on
+moving items...such as the yellow armor on the elevator at the beginning
+of map </FONT><FONT COLOR="#FFFFCC">E1M4; </FONT><FONT COLOR="#FFFFFF">thanks
+to Striker to remind me to put it here.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">When a client is partially/totally
+immersed in liquid and he (or she) fires the lightning gun, there is a
+radial explosion. Those outside the liquid, but inside this radius will
+also experience this little known (undocumented?) quake feature and get
+hurt. There..it's documented.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Only in QW can you prevent automatic
+selection of a thunderbolt under water if you run out of rockets. Not in
+normal Quake.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">In GL Quake the dead bodies
+won't have the right player's shirt and pants color. This is a GL Quake
+problem which can be fixed.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Teams cannot remain when one
+changes to another level...they disappear...this is one of the limits of
+the QuakeC. It can only be partially solved, and then people would complain,
+calling it a bug, since it only works half the time, blah, blah, etc.....</FONT></FONT></LI>
+</UL>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+
+<P><A NAME="troubleshooting"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Troubleshooting</FONT></FONT></FONT>
+<UL>
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">In observermode, the possibility
+exists that one may become stuck. Simply press the "jump" key and presto.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">In the menu, each number "</FONT><FONT COLOR="#FFFFCC">n</FONT><FONT COLOR="#FFFFFF">"
+corresponds with "</FONT><FONT COLOR="#FFFFCC">impulse n</FONT><FONT COLOR="#FFFFFF">";
+e.g. the weapons. It has come to our attention that a few people have tied
+their weapon keys (impulse 1-9) to other keys, for whatever dark and mysterious
+reason, and should either type </FONT><FONT COLOR="#FFFFCC">impulse n</FONT><FONT COLOR="#FFFFFF">
+on the console, or should press the appropriate weapon key.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Some people encounter problems
+that they e-mail us about, while they haven't read this document. Well
+the solution is: they should either burn in hell for 666 years or lick
+this readme from the hard disk while it is spinning.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFCCCC">maxplayers=1</FONT><FONT COLOR="#FFFFFF">;
+you should spawn a network game, mr newbie...no offense :)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">If deathmatch 4 is too difficult
+'cause the bots are whipping your behind, try typing </FONT><FONT COLOR="#FFFF99">removeallbots</FONT><FONT COLOR="#FFFFFF">
+on the console (administrator only)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFCCCC">Error: Cache_Tryalloc: n Bytes
+is greater than</FONT><FONT COLOR="#FFFFFF">..and all that...try to allocate
+more memory for quake. Add </FONT><FONT COLOR="#FFFFCC">-winmem n</FONT><FONT COLOR="#FFFFFF">
+where n is the amount of MegaBytes; for winquake the parameter is </FONT><FONT COLOR="#FFFFCC">-heapsize
+n</FONT><FONT COLOR="#FFFFFF">; n is in KiloBytes. </FONT><FONT COLOR="#FFFFCC">-zone
+512</FONT><FONT COLOR="#FFFFFF">; reserves 512 bytes for your .cfg file</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Verdana"><FONT COLOR="#FFFFFF">"I can't see my weapon". DUH!!
+you're in observermode.</FONT></FONT></LI>
+</UL>
+&nbsp;
+
+<P><A NAME="help"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Help</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">If you think you have discovered
+a bug in the obots (</FONT><FONT COLOR="#FF6666">and you have read the
+ENTIRE documentation first</FONT><FONT COLOR="#FFFFFF">), Buzz off...The
+OBOTS are finished ...finito ...done ...klar ...af ...fin ...sudah finis,
+we're NOT gonna update it anymore...or anyless...or anyhow; anyway, if
+you have comments, suggestions, flame, joboffers, poetry, funny anigifs,
+feel free to send email to <A HREF="mailto:obots@demigod.demon.nl">obots@demigod.demon.nl</A></FONT>
+oh and please no questions about "can I have the code...please", "how do
+your bots... and what is the specific code", "How do you like this level
+that I've made...", "why no QW ports?", "I've compiled my own static waypoints
+but they don't work...here's the file... can you...they're for DM4...",&nbsp;
+"will you do a Q2 port?", and all that..Mr Elusive says he will take his
+code to the grave ...(no e-mail with questions like&nbsp; "Where will you
+be buried and where can I hire a shovel?" either)...unless trinity comes
+out and he has a change of heart (no not a heart transplant)...but then
+it will be a public release only.</FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Don't mail us about the console
+command '</FONT><FONT COLOR="#FFFFCC">omicron</FONT><FONT COLOR="#FFFFFF">'
+either!!!</FONT></FONT>
+<BR>&nbsp;
+
+<P><A NAME="aknowledgements"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Acknowledgments
+and thanks</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Our thanks go out to all
+the beta testers (couldn't have done it without ya...although&yuml;maybe,
+but it wouldn't have been finished so soon), </FONT><FONT COLOR="#FFCCFF">Olivier
+Montanuy</FONT><FONT COLOR="#FFFFFF"> (QuakeC Manual), </FONT><FONT COLOR="#FFCCFF">Steven
+Polge</FONT><FONT COLOR="#FFFFFF"> (you know, the guru of the reaper bots...we're
+not worthy), the ENTIRE team at </FONT><FONT COLOR="#FFCCFF">iD</FONT><FONT COLOR="#FFFFFF">
+((oooh, we're not worthy)times 40), </FONT><FONT COLOR="#FFCCFF">Uwe Girlich</FONT><FONT COLOR="#FFFFFF">
+(DEM format), </FONT><FONT COLOR="#FFCCFF">Roscoe A. Sincero</FONT><FONT COLOR="#FFFFFF">
+(several other points of inspiration), </FONT><FONT COLOR="#FFCCFF">Alan
+Kivlin</FONT><FONT COLOR="#FFFFFF"> (some code to count the maximum number
+of clients), </FONT><FONT COLOR="#FFCCFF">Judge Slappy</FONT><FONT COLOR="#FFFFFF">(</FONT><FONT COLOR="#FFCCFF">Mike
+McMillen</FONT><FONT COLOR="#FFFFFF">), for the skins and for giving me
+such a light sentence in relation to the grieveous mental harm I have visited
+upon his honorous person ;), </FONT><FONT COLOR="#FFCCFF">Meanstryk</FONT><FONT COLOR="#FFFFFF">
+(several ideas), </FONT><FONT COLOR="#FFCCFF">Greg Howell</FONT><FONT COLOR="#FFFFFF">
+(tiggerskin..it rocks!), </FONT><FONT COLOR="#FFCCFF">Tigger Clan</FONT><FONT COLOR="#FFFFFF">,
+</FONT><FONT COLOR="#FFCCFF">Luke Pope</FONT><FONT COLOR="#FFFFFF"> (skindude),
+</FONT><FONT COLOR="#FFCCFF">Alan Yen</FONT><FONT COLOR="#FFFFFF"> (another
+skindude), </FONT><FONT COLOR="#FFCCFF">Kenneth Scott</FONT><FONT COLOR="#FFFFFF">
+(Heard nothing for a long time...then he tanks us for using his' skins..no
+sir..thank YOU for enabling us to bask in such glorious artwork!!!), </FONT><FONT COLOR="#FFCCFF">Tim
+Willits</FONT><FONT COLOR="#FFFFFF"> (did he really do his own skin?),
+</FONT><FONT COLOR="#FFCCFF">James Kennison</FONT><FONT COLOR="#FFFFFF">
+(for Elvis' cool skin (so I'm thanking his wife for suggesting he'd make
+the skin)), </FONT><FONT COLOR="#FFCCFF">me</FONT><FONT COLOR="#FFFFFF">
+(I'm so nerdish at times) for telling Mr E. to help me get my quake skills
+up, </FONT><FONT COLOR="#FFCCFF">Mr Elusive</FONT><FONT COLOR="#FFFFFF">
+(oh I'm not worthy), his oversized monitor, </FONT><FONT COLOR="#FFCCFF">the
+3Dfx guys</FONT><FONT COLOR="#FFFFFF"> (for the Voodoo Chip), </FONT><FONT COLOR="#FFCCFF">Gordon
+Moore</FONT><FONT COLOR="#FFFFFF"> (for the well designed PC ...NOT), </FONT><FONT COLOR="#FFCCFF">Bill
+Gates</FONT><FONT COLOR="#FFFFFF"> for directX..he wish, I love gibbing
+a skill zero Bill), the </FONT><FONT COLOR="#FFCCFF">Pope</FONT><FONT COLOR="#FFFFFF">,
+</FONT><FONT COLOR="#FFCCFF">demigod</FONT><FONT COLOR="#FFFFFF">, </FONT><FONT COLOR="#FFCCFF">Mr.
+E</FONT><FONT COLOR="#FFFFFF">'s parents, his grandparents, my neighbors,
+their cat, the fleas on the mongrel..eh..cute beastie, still readin' huh?
+okay let's really do something fun..(at your own risk of course)....type
+"omicron" on the console ...see what happens ...heheh ...Webster's New
+Dictionary and Thesaurus (some dinosaur I guess), [concise edition, 1990]
+(for Latin texts), </FONT><FONT COLOR="#FFCCFF">Marc Okrand</FONT><FONT COLOR="#FFFFFF">'s
+"The Klingon Dictionary" (for the Klingon texts), </FONT><FONT COLOR="#FFCCFF">Marvel</FONT><FONT COLOR="#FFFFFF">,
+</FONT><FONT COLOR="#FFCCFF">DC</FONT><FONT COLOR="#FFFFFF"> and all those
+other publishers for all the comic characters used, movies for the phrases
+for the bots, the </FONT><FONT COLOR="#FFCCFF">Team Evolve</FONT><FONT COLOR="#FFFFFF">
+"Painkeep", because we copied their copyright paragraph (we couldn't think
+of one ourselves), the </FONT><FONT COLOR="#FF99FF">Black list</FONT><FONT COLOR="#FFFFFF">;
+yes we've put an official black list on the net and to id and Ramshackle
+to ignore people put on this list (latest news: so many people were put
+on the black list is has been taken offline; it proved too heavy and the
+line was about to snap); </FONT><FONT COLOR="#FFCCFF">John MClancy</FONT><FONT COLOR="#FFFFFF">..for
+being the first to report the player to player chat feature...heheh, and
+a useful suggestion (failed my save there). If we haven't mentioned you,
+and you know/think you deserve credit...well, here it is...</FONT><B><FONT COLOR="#FF6666">THANKS!!!</FONT></B><FONT COLOR="#FFFFFF"><FONT SIZE=-1>&nbsp;</FONT></FONT></FONT>
+<BR>&nbsp;
+
+<P><A NAME="copyright"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Copyright
+and Distribution Permissions</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Team Omicron grants to the
+final end user an exclusive right to freely distribute this production
+in its undisturbed and unaltered entirety provided no exchange, monetary
+or otherwise, is requested.</FONT></FONT>
+<BR><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">All other media entities
+are expressly excluded from this right prior to acknowledge and consent
+from Team Omicron or one of Team Omicron's duly appointed representatives,
+agents or subsidiaries.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">By using this product you
+agree to exempt, without reservation, the authors and owners of this production
+or components thereof from any responsibility for liability, damage caused,
+or loss, directly or indirectly, by this software, including but not limited
+to, any interruptions of service, loss of business, or any other consequential
+damages resulting from the use of or operation of this product or components
+thereof. No warranties are made, expressed or implied, regarding the usage,
+functionality, or implied operability of this product. All elements are
+available solely on an "as-is" basis. Usage is subject to the user's own
+risk.</FONT></FONT>
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">The typing of omicron on
+the console is also at the typer's own risk.</FONT></FONT>
+
+<P><FONT FACE="Verdana">Rocket Arena is the property of David 'crt' Wright.</FONT>
+<BR><FONT FACE="Verdana"><B><I><FONT COLOR="#FF6666">real</FONT></I></B>
+persons(tm) copyright by GOD</FONT>
+<BR>&nbsp;
+
+<P><FONT FACE="Verdana"><FONT COLOR="#FFFFFF">Authors may NOT use these
+modifications as a basis for other publically available work.</FONT></FONT>
+<BR>&nbsp;
+
+<P><A NAME="availability"></A><FONT FACE="Verdana"><FONT COLOR="#FF8000"><FONT SIZE=+1>Availability</FONT></FONT></FONT>
+
+<P><FONT FACE="Verdana">You are reading this, so you must have it, so why
+would you need another one?</FONT>
+
+<P><A NAME="Version"></A><FONT FACE="Verdana"><FONT COLOR="#FF9900"><FONT SIZE=+1>Version
+Changes</FONT></FONT></FONT>
+<BR>&nbsp;
+<BR><FONT FACE="Verdana">1.01</FONT>
+<UL>
+<LI>
+<FONT FACE="Verdana">Fixed max cells able to pickup by a client.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed skin errors generated in GLQuake.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Skinup/skindown were reversed...oops...should work
+as was intended.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Added "noshellcases" console command for better compatibility
+with low performance/memory systems.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Added a vote feature for voting who will be administrator.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed link with Luke Pope's skin page...my appologies
+for this mistake Luke.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed the link with Mike McMillen skin page...my apologies
+for this mistake Mr Dredd. Oh my poor left foot!</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed chat lines that were scrambled.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Added messages that are displayed after every console
+command.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Added 'cmdlist' console command to show all console
+commands.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed floating shell cases.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Skins are now properly saved over level changes.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed AI node switch.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed bubble-edict leak.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed movement code non-walkable optimization.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Now removing items that remained in backpacks when
+for instance using the 'noweapons' command.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Added 'registered 2' to disable all extra models.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">'bottalk' and 'serverflags' console command documented.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Runaway loop error fixed.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed bot enter/leave messages.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed bot 'leave' sound.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Added feature to cycle maps besides randomizing them.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed bot confusion when using deathmatch 2 rules.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">Fixed eyecam and chasecam viewing from real players.</FONT></LI>
+</UL>
+<FONT FACE="Verdana">1.02</FONT>
+<UL>
+<LI>
+<FONT FACE="Verdana">fixed 'noshellcases' console command</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed bot waypoint dropping (choose new ltg: flags
+instead of botflags)</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">new even faster bubble-routing</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed bots getting stuck low ceilings/corners (BFL_ONGROUND)</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed observer camera cycling</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed bot jumping up and into wind tunnels (trigger_push)</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed step checking</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed barrier jumping</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed jump down reachability!</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed bot super damage sound</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed get air stuff</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed death bubble spawning at the origin of the owner</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed some bugs rocket arena</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">added rocket arena code to bots</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">extended AI SPRUCE (tm)</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">balanced some fuzzy logic</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">added turning around with moveleft &amp; moveright
+keys using the chasecam.</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed ability to hear enemies</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">added KasCam patch</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed GLQuake invalid skin error (what a bogus)</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed rocket jumping (gee, shootin' a rocket up in
+the air in the prediction isn't very smart :))</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed long term goal caching</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed plat wp link bug</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed plat position bug</FONT></LI>
+
+<LI>
+<FONT FACE="Verdana">fixed long term goal distance bug</FONT></LI>
+</UL>
+
+</BODY>
+</HTML>

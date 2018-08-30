@@ -1,0 +1,1 @@
+qizmo -D *.qwz

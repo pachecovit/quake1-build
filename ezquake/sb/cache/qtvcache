@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html data-ng-app="MetaQTV" lang="en">
+    <head>
+        <title>QTV Hub</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body data-ng-controller="MainController" data-ng-cloak>
+        <header>
+            <div class="topbar">
+                <div class="topbar-left">
+                    <div class="logo"><img src="logo.png" alt="QTV Hub"></div>
+                </div>
+                <div class="topbar-middle">
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="number">{{playercount}}</span>
+                            <span data-ng-pluralize
+                                data-count="playercount"
+                                data-when="{'one': 'Player',
+                                            'other': 'Players'}">
+                            </span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">{{observercount}}</span>
+                            <span data-ng-pluralize
+                                data-count="observercount"
+                                data-when="{'one': 'Observer',
+                                            'other': 'Observers'}">
+                            </span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">{{servercount}}</span>
+                            <span data-ng-pluralize
+                                data-count="servercount"
+                                data-when="{'one': 'Server',
+                                            'other': 'Servers'}">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="filters">
+                        <div class="filter">
+                            Active only
+                            <a data-ng-click="active_only = !active_only">
+                                <img src="checkbox-normal.png" data-ng-src="{{active_only ? 'checkbox-checked.png' : 'checkbox-normal.png'}}" alt="">
+                            </a>
+                        </div>
+                        <div class="filter">
+                            Popular first
+                            <a data-ng-click="popular_first = !popular_first">
+                                <img src="checkbox-normal.png" data-ng-src="{{popular_first ? 'checkbox-checked.png' : 'checkbox-normal.png'}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="obituary"><img src="icons/tombstone.png" alt="" title="Rest in peace, Atrophy."></div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="servers">
+                <div data-ng-repeat="server in servers | activeOnly:this | popularFirst:this | counter:this" class="server">
+                    <div data-ng-if="server.levelshot" class="levelshot"><img src="levelshot_missing.jpg" data-ng-src="levelshots/{{server.levelshot}}.jpg" alt=""></div>
+                    <div data-ng-if="!server.levelshot" class="levelshot"><img src="levelshot_missing.jpg" alt=""></div>
+                    <div data-ng-if="server.status == 'Standby' && server.levelshot" class="overlay"></div>
+                    <div data-ng-if="server.players.length > 2 && server.teams.length == 2" class="overall_scores">
+                        {{server.teams[0].name}} <span class="count">{{server.teams[0].frags}}</span>
+                        -
+                        <span class="count">{{server.teams[1].frags}}</span> {{server.teams[1].name}}
+                    </div>
+                    <div data-ng-if="server.players.length > 0" class="scores">
+                        <table>
+                            <tr>
+                                <th class="ping">Ping</th>
+                                <th class="frags">Frags</th>
+                                <th data-ng-if="server.players.length > 2" class="team">Team</th>
+                                <th class="name">Name</th>
+                            </tr>
+                            <tr data-ng-repeat="player in server.players | orderBy:'-frags'">
+                                <td class="ping">{{player.ping}}</td>
+                                <td class="frags">
+                                    <div data-ng-class="'topcolor topcolor' + player.topcolor">
+                                    <div data-ng-class="'bottomcolor bottomcolor' + player.bottomcolor">
+                                    {{player.frags}}
+                                    </div>
+                                    </div>
+                                </td>
+                                <td data-ng-if="server.players.length > 2" class="team">{{player.team}}</td>
+                                <td class="name">{{player.name}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="topbar">
+                        <div data-ng-if="server.country" class="flag"><img src="flags/_unknown.png" data-ng-src="flags/{{server.country}}.png" alt="{{server.country}}"></div>
+                        <div data-ng-if="!server.country" class="flag"><img src="flags/_unknown.png" alt=""></div>
+                        <div class="address">{{server.hostname}}:{{server.port}}</div>
+                        <div class="map">{{server.map}}</div>
+                    </div>
+                    <div class="bottombar">
+                        <div class="info">
+                            <div data-ng-if="server.status != 'Standby'" class="status-icon"><img src="icons/hourglass_game.png" alt=""></div>
+                            <div data-ng-if="server.status == 'Standby'" class="status-icon"><img src="icons/hourglass_standby.png" alt=""></div>
+                            <div class="status">{{server.status}}</div>
+                            <div class="observers-icon"><img src="icons/observers.png" alt=""></div>
+                            <div class="observers">
+                                <span data-ng-pluralize
+                                    data-count="server.observercount"
+                                    data-when="{'0': 'No observers',
+                                                'one': '1 observer',
+                                                'other': '{} observers'}">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="action"><a data-ng-href="{{server.watchlink}}">Watch</a></div>
+                            <div class="action"><a data-ng-href="{{server.playlink}}/spectate">Spec</a></div>
+                            <div class="action"><a data-ng-href="{{server.playlink}}/join">Join</a></div>
+                        </div>
+                    </div>
+                    <div data-ng-if="server.status != 'Standby' && server.status != 'Countdown'" class="frame"></div>
+                    <div data-ng-if="server.status == 'Countdown'" data-blink class="frame"></div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+

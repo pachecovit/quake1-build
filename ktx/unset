@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-03 18:23:54 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>start</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-03 18:24:17 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>e1m7</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+		<event>
+			<pick_mapitem>
+				<time>8.467025</time>
+				<item>health_100</item>
+				<player>_ÌuãhôeÎ_</player>
+				<value>100</value>
+			</pick_mapitem>
+		</event>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-03 18:24:56 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>start</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-03 21:29:34 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>start</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-03 21:29:50 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>e1m7</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+		<event>
+			<pick_mapitem>
+				<time>16.059812</time>
+				<item>item_sigil</item>
+				<player>_ÌuãhôeÎ_</player>
+				<value>0</value>
+			</pick_mapitem>
+		</event>
+		<event>
+			<damage>
+				<time>26.085334</time>
+				<attacker></attacker>
+				<target>Ðèïâïó</target>
+				<type>rl</type>
+				<quad>0</quad>
+				<splash>1</splash>
+				<value>0</value>
+				<armor>0</armor>
+			</damage>
+		</event>
+		<event>
+			<damage>
+				<time>30.309835</time>
+				<attacker></attacker>
+				<target>Ðèïâïó</target>
+				<type>rl</type>
+				<quad>0</quad>
+				<splash>0</splash>
+				<value>0</value>
+				<armor>0</armor>
+			</damage>
+		</event>
+		<event>
+			<death>
+				<time>30.309835</time>
+				<attacker></attacker>
+				<target>Ðèïâïó</target>
+				<type>rl</type>
+				<quad>0</quad>
+				<armorleft>0</armorleft>
+				<killheight>0</killheight>
+				<lifetime>28.558625</lifetime>
+			</death>
+		</event>
+		<event>
+			<drop_backpack>
+				<time>30.309835</time>
+				<weapon>Shotgun</weapon>
+				<shells>12</shells>
+				<nails>0</nails>
+				<rockets>0</rockets>
+				<cells>0</cells>
+				<player>Ðèïâïó</player>
+			</drop_backpack>
+		</event>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-04 01:58:44 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>start</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-04 01:59:01 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>e1m7</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-04 01:59:28 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>start</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-04 01:59:49 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>e1m7</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-04 02:00:30 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>start</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-04 03:16:30 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>start</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ktxlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qw-dev.net/attachments/download/177/ktxlog_0.1.xsd">
+	<version>0.1</version>
+	<match_info>
+		<timestamp>2011-04-04 03:16:55 Hora oficial do Brasil</timestamp>
+		<hostname>My KTX Server #1</hostname>
+		<ip>189.4.105.173</ip>
+		<port>28001</port>
+		<map>e1m7</map>
+		<mode>FFA</mode>
+	</match_info>
+	<events>
+	</events>
+</ktxlog>

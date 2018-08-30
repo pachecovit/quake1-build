@@ -1,0 +1,1 @@
+qizmo -C *.qwd

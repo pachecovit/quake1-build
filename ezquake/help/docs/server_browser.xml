@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/document.xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/document.xsd">
+	<head>
+		<title>ezQuake Server Browser</title>
+		<date>2004-11-22</date>
+	</head>
+	<body>
+		<h align="center">ezQuake Server Browser</h>
+		<hr />
+		<p>ezQuake's Server Browser works pretty much like GameSpy except that it is much faster and more accurate. It allows you to use master servers, source files, add servers to lists manually, search for specific servers or players, sort them by several criteria and supports Qizmo when connecting to servers (you connect to a Qizmo and then choose a server to connect to in the ezQuake Server Browser and ezQuake will automatically use that Qizmo if you set it up to do so).</p>
+		<h>Contents of this readme:</h>
+			<list>
+				<li><h>Basic Information</h>
+					<list>
+						<li>How to add a master server to your sources-list</li>
+						<li>How to make your own serverlist</li>
+						<li>How to bookmark servers</li>
+						<li>How to move servers between source-files</li>
+					</list>
+				</li>
+			</list>
+			<list>
+				<li><h>Columns available in servers/players lists</h></li>
+			</list>
+			<list>
+			<li><h>Server Browser keys</h>
+				<list>
+						<li>In "servers" list</li>
+						<li>In "sources" list</li>
+						<li>In "players" list</li>
+						<li>Server info window</li>	
+				</list>
+			</li>		
+			</list>
+			<list>
+			<li><h>Server Browser commands</h>
+				<list>
+						<li>addserver 'ip:port'</li>
+						<li>menu_slist</li>
+				</list>
+			</li>		
+			</list>
+			<list>
+			<li><h>Server Browser variables</h>
+				<list>
+						<li>sb_autohide &#60;0|1|2&#62;</li>
+						<li>sb_hidedead &#60;0|1&#62;</li>
+						<li>sb_hideempty &#60;0|1&#62;</li>
+						<li>sb_hidefull &#60;0|1&#62;</li>
+				<li>sb_hideempty &#60;0|1&#62;</li>
+				<li>sb_hidefull &#60;0|1&#62;</li>
+				<li>sb_hidenotempty &#60;0|1&#62;</li>
+				<li>sb_inforetries &#60;number of retries&#62;</li>
+				<li>sb_infospersec &#60;serverinfos per second&#62;</li>
+				<li>sb_infotimeout &#60;milliseconds until timeout&#62;</li>
+				<li>sb_liveupdate &#60;seconds between window refreshes&#62;</li>
+				<li>sb_mastercache &#60;0|1&#62;</li>
+				<li>sb_masterretries &#60;number of retries&#62;</li>
+				<li>sb_mastertimeout &#60;milliseconds until timeout&#62;</li>
+				<li>sb_maxwidth &#60;width&#62;</li>
+				<li>sb_maxheight &#60;height&#62;</li>
+				<li>sb_pings &#60;pings per second&#62;</li>
+				<li>sb_pingspersec &#60;pings per second&#62;</li>
+				<li>sb_pingtimeout &#60;milliseconds until timeout&#62;</li>
+				<li>sb_showaddress &#60;0|1&#62;</li>
+				<li>sb_showcounters &#60;0|1&#62;</li>
+				<li>sb_showcounters &#60;0|1&#62;</li>
+				<li>sb_showgamedir &#60;0|1&#62;</li>
+				<li>sb_showmap &#60;0|1&#62;</li>
+				<li>sb_showping &#60;0|1&#62;</li>
+				<li>sb_showplayers &#60;0|1&#62;</li>
+				<li>sb_showtimelimit &#60;0|1&#62;</li>
+				<li>sb_sortplayers &#60;sort order&#62;</li>
+				<li>sb_sortservers &#60;sort order&#62;</li>
+				<li>sb_sourcevalidity &#60;validity time&#62;</li>
+				<li>sb_status &#60;0|1&#62;</li>
+				<li>cl_useproxy &#60;0|1&#62;</li>
+				</list>
+			</li>		
+			</list>
+			<br />
+			<hr />
+			<h align="center">Basic Information</h>
+			<hr />
+			<p>The Server Browser uses the "sources.txt" file located in ezquake/sb/ directory. Files containing their own server lists must be in this directory as well. The format of a source file is as follows:</p>
+			<p><pre>type [master/file], name [any name you want], [address:port/filename]</pre></p>
+			<p>Example:</p>
+			<p><pre>master "Poland" 150.254.66.120:27000</pre></p>
+			<hr />
+			<h align="center">How to add a master server to your sources-list:</h>
+			<hr />
+			<p>- go to the Server Browser menu under sources and press [INS]. Type the following info in the square brackets at each prompt:</p>
+			<p>
+			<pre>
+				type master
+				name Poland
+				addr 150.254.66.120:27000
+			</pre>
+			</p>
+			<p>and then accept. The source is now saved under your source-list for future use.</p>
+			<hr />
+			<h align="center">How to make your own serverlist:</h>
+			<hr />
+			<p>create a file under ezquake/sb/ with file-extentions *.scr, *.cfg, *.txt or no file-extention at all,</p>
+			<p>Examples:</p>
+			<p>
+			<pre>
+			ezquake/sb/serverlist.scr 
+			ezquake/sb/serverlist.cfg
+			ezquake/sb/serverlist.txt 
+			ezquake/sb/serverlist
+			</pre>
+			</p>
+			<p>open the file with a text editor and add your servers like this:</p>
+			<p>
+			<pre>
+			quake.get2net.dk:28101 
+			quake.get2net.dk:28102
+			qw.spel.telenordia.se:28000
+			</pre>
+			Note: One IP per line only
+			</p>
+			<p>save the file and close it</p>
+			<p>go to the Server Browser menu under sources and press [INS]. Type in the following info in the square brackets at each prompt:</p>
+			<p>
+			<pre>
+			type      file
+			name      My private list
+			filename  serverlist.scr
+			</pre>
+			Note: obviously you are free to choose another name and you must specify the file you just created
+			</p>
+			<p>the source is now saved under your source-list for future use</p>
+			<hr />
+			<h align="center">How to bookmark servers:</h>
+			<hr />
+			<p>In the Server Browser there is also a sourcetype DUMMY called UNBOUND. When adding servers from console (using command /addserver ip:port) these will be placed into this temporary source. You can use this sourcetype for bookmarking.</p>
+			<p>Example:</p>
+			<p>You are playing on a server and people want to change server. They give you an unknown ip and you want to add it for later use. You use the command "addserver ip:port" and the server will be placed in source-type "DUMMY - TEMP" for bookmarking.</p>
+			<hr />
+			<h align="center">How to move servers between source-files:</h>
+			<hr />
+			<p>When looking at the serverinfo you can move a server to another source-file by clicking on the "sources" menu-flag.</p>
+			<p>Example:</p>
+			<p>You have your private serverlist called serverlist.txt, add that as file under sources. You update a master server and find a server you want on your private list. Press [ENTER] on the server and go to "source". Highlight "serverlist" and and press [ESC]. Go to sources and highlight only your own serverlist. Now the server will be updated on your list.</p>
+			<hr />
+			<h align="center">How to update sources</h>
+			<hr />
+			<p>In ezQuake select the Server Browser menu, switch to the "sources" column with the right-arrow key, press [SPACE] to update the sources.</p>	
+			<hr />
+			<h align="center">How to scan servers</h>
+			<hr />
+			<p>In ezQuake select the Server Browser menu, switch to the "servers" column and press [SPACE] to scan the servers.</p>
+			<hr />
+			<h align="center">Columns available in servers/players list:</h>
+			<hr />
+			<list>
+			<li>1 - server name (hostinfo)</li>
+			<li>2 - server address (ip:port)</li> 
+			<li>3 - ping to the server</li>
+			<li>4 - gamedir (mod played)</li> 
+			<li>5 - map currently played</li>
+			<li>6 - number of players and max number of players</li> 
+			<li>7 - fraglimit</li> 
+			<li>8 - timelimit</li> 
+			<li>9 - player name (only in "players" list)</li>
+			</list>
+			<hr />
+			<h align="center">Server Browser keys</h>
+			<hr />
+			<color>In "servers" list:</color>
+			<list>
+				<li>
+					<h>[ALT] + character</h>
+					search servers by name
+				</li>
+				<li>
+					<h>[TAB]</h>
+					go to players list
+				</li>	
+				<li>
+					<h>[ENTER]</h>
+					first time you press [ENTER] it will open the serverinfo window showing the server and players, second time you press [ENTER] you will enter the server
+				</li>
+				<li>
+					<h>[J], [P]</h>
+					join server (connect as player)
+				</li>
+				<li>
+					<h>[O], [S], [CTRL]+[ENTER]</h>
+					observe (connect as spectator)
+				</li>
+				<li>
+					<h>[R]</h>
+					refresh current server info
+				</li>
+				<li>
+					<h>[SPACE]</h>
+					get pings and infos
+				</li>				
+				<li>
+					<h>[1]-[8]</h>
+					sort by this column (check "Columns available in servers/players list" above for an explanation of each number)
+				</li>	
+				<li>
+					<h>[CTRL] + [1]-[8]</h>
+					enable/disable this column (check "Columns available in servers/players list" above for an explanation of each number)
+				</li>
+				<li>
+					<h>[C]</h>
+					copy the servername with ip:port, so you can paste it in in qw or other apps with [CTRL]+[V]
+				</li>
+				<li>
+					<h>[CTRL]+[C]</h>
+					copy only ip:port, so you can paste it in in qw or other apps with [CTRL]+[V] to clipboard
+				</li>	
+				<li>
+					<h>[V]</h>
+					send servername with ip:port to console (say)
+				</li>
+				<li>
+					<h>[CTRL]+[V]</h>
+					send servername with ip:port to console (say_team)
+				</li>
+				<li>
+					<h>[N], [INS]</h>
+					add new server to "unbound" source (as with "addserver" console command)
+				</li>
+			</list>
+			<color>In "sources" list:</color>
+			<list>
+				<li><h>[ENTER]</h>
+					toggle source, move cursor down
+				</li>
+				<li><h>[]]</h>
+					toggle source
+				</li>
+				<li><h>[+], [=]</h>
+					select all sources
+				</li>
+				<li><h>[-]</h>
+					deselect all sources
+				</li>
+				<li><h>[*]</h>
+					invert selection
+				</li>
+				<li><h>[1]-[3]</h>
+					sort by this column (check "Columns available in servers/players list" above for an explanation of each number)
+				</li>
+				<li><h>[U]</h>
+					update selected source (get servers)
+				</li>
+				<li><h>[CTRL]+[SPACE]</h>
+					update all sources
+				</li>
+				<li><h>[SPACE]</h>
+					update sources, that were not updates recently (period specified by "sb_sourcevalidity")
+				</li>
+				<li><h>[N], [INS]</h>
+					add sources
+				</li>
+				<li><h>[D], [DEL]</h>
+					delete source (better backup sources first..)
+				</li>
+			</list>
+			<color>In "players" list:</color>
+			<list>
+				<li><h>[ALT] + character</h>
+					search players by name
+				</li>
+				<li><h>[TAB]</h>
+					go to players list, to corresponding server
+				</li>
+				<li><h>[ENTER]</h>
+					first time you press [ENTER] it will open the serverinfo window showing the server and players, second time you press it you will enter the server
+				</li>
+				<li><h>[J], [P]</h>
+					join server (connect as player)
+				</li>
+				<li><h>[O], [S]</h>
+					observe (connect as spectator)
+				</li>
+				<li><h>[SPACE]</h>
+					get pings and infos
+				</li>
+				<li><h>[1]-[9]</h>
+					sort by this column (check "Columns available in servers/players list" above for an explanation of each number)
+				</li>
+				<li><h>[CTRL] + [1]-[9]</h>
+					enable/disable this column (check "Columns available in servers/players list" above for an explanation of each number)
+				</li>
+				<li><h>[C]</h>
+					copy the servername with ip:port, so you can paste it in in qw or other apps with [CTRL]+[V]
+				</li>
+				<li><h>[CTRL]+[C]</h>
+					copy only ip:port, so you can paste it in in qw or other apps with [CTRL]+[V] to clipboard
+				</li>
+				<li><h>[V]</h>
+					send servername with ip:port to console (say)
+				</li>
+				<li><h>[CTRL]+[V]</h>
+					send servername with ip:port to console (say_team)
+				</li>
+			</list>
+			<color>Server info window:</color>
+			<list>
+				<li><h>[ENTER]</h>
+					join server (connect as player)
+				</li>
+				<li><h>[CTRL]+[ENTER]</h>
+					observe (connect as spectator)
+				</li>
+				<li><h>[PGUP] / [PGDN]</h>
+					previous/next server/player
+				</li>
+				<li><h>[BACKSPACE], [ESC]</h>
+					back to servers or players list
+				</li>
+				<li><h>[J], [P]</h>
+					join server (connect as player)
+				</li>
+				<li><h>[O], [S], [CTRL]+[ENTER]</h>
+					observe (connect as spectator)
+				</li> 
+				<li><h>[C]</h>
+					copy the servername with ip:port, so you can paste it in in qw or other apps with [CTRL]+[V]
+				</li>
+				<li><h>[CTRL]+[C]</h>
+					copy only ip:port, so you can paste it in in qw or other apps with [CTRL]+[V] to clipboard
+				</li>
+				<li><h>[V]</h>
+					send servername with ip:port to console (say)
+				</li>
+				<li><h>[CTRL]+[V]</h>
+					send servername with ip:port to console (say_team)
+				</li>
+			</list>
+			<hr />
+			<h align="center">Server Browser commands:</h>
+			<hr />
+			
+			<list>
+				<li><h>addserver &#60;ip:port&#62;</h>
+					This allows you to add a server to the UNBOUND source. This can be used to quickly bookmark servers.
+				</li>
+				<li><h>menu_slist</h>
+				This will open the the Server Browser menu. This is the same as accessing it via the main menu, but you can bind this to a key.
+				<pre>
+				Example:
+				bind f3 menu_slist
+				</pre>
+				</li>
+			</list>
+			<hr />
+		<h align="center">Server Browser variables:</h>
+			<hr />
+		<color>cl_useproxy &#60;0|1&#62;</color>
+			<p>This toggles whether Qizmo should be used (if detected) to a server. When enabled the server browser will use an existing connection to a Qizmo when connecting another server by using the ezQuake Server Browser.</p>
+			<p>
+			<pre>
+			0 = do not use Qizmo to connect a server chosen in the Server Browser
+			1 = use Qizmo to connect a server chosen in the Server Browser
+			</pre>
+			Default value is "0".
+			</p>
+		<color>sb_autohide &#60;0|1|2&#62;</color>
+			<p>This toggles in which cases the server browser should automatically hide itself when connecting to a server.</p>
+			<p>
+			<pre>
+			0 = Never hide server browser 
+			1 = This will cause the server browser to always hide after connecting
+			2 = This will cause the server browser to hide after connecting only, if the connected server is not a qizmo proxy, useful if you often connect to Qizmos only for rerouting features (with "cl_useproxy 1")
+			</pre>
+			Default value is "1". 
+			</p>	
+  		<color>sb_hidedead &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should hide dead servers.</p>
+			<p>
+			<pre>
+			0 = don't hide dead servers
+			1 = hide dead servers
+			</pre>
+			Default value is "1".
+			</p>
+   		<color>sb_hideempty &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should hide empty servers.</p>
+			<p>
+			<pre>
+			0 = don't hide empty servers
+			1 = hide empty servers
+			</pre>
+			Default value is "1".
+			</p>
+		<color>sb_hidefull &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should hide full servers.</p>
+			<p>
+			<pre>
+			0 = don't hide full servers 
+			1 = hide full servers
+			</pre>
+			Default value is "0".
+			</p>
+  		<color>sb_hidenotempty &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should hide empty servers.</p>
+			<p>
+			<pre>
+			0 = don't hide empty servers
+			1 = hide empty servers
+			</pre> 
+			Default value is "0".
+			</p>
+		<color>sb_inforetries &#60;number of retries&#62;</color>
+			<p>This determines how often ezQuake should try to retrieve information from a server until it is considered to be not responding.</p>
+			<p>Default value is "3".</p>
+		<color>sb_infospersec &#60;serverinfos per second&#62;</color>
+			<p>This determines how many serverinfos per second ezQuake should retrieve when scanning servers. When setting this value too high you will flood your line, causing you to not receive information from servers or lagging your connect to the server you are currently connected to.</p>
+			<p>Default value is "100".</p>  
+		<color>sb_infotimeout &#60;milliseconds until timeout&#62;</color>
+			<p>This determines how long ezQuake will wait for a reply when trying to retrieve information from a server until the attempt times out.</p>
+			<p>Default value is "1000".</p>  
+		<color>sb_liveupdate &#60;seconds between window refreshes&#62;</color>
+			<p>This will determine how often ezQuake should refresh the serverinfo window, the specified value sets the delay in seconds. Setting it to "0" will disable automatic refreshing.</p>
+			<p>Default value is "2".</p>
+		<color>sb_mastercache &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should cache the results of queries to master server (in directory qw/sb/cache). If you restart ezQuake and don't update sources or if a master server is down, ezQuake will use the cache.</p>
+			<p>
+			<pre>
+			0 = don't use cache for master servers
+			1 = use the cache for master servers when they are down or haven't been refreshed
+			</pre>
+			Default value is "1".
+			</p>
+		<color>sb_masterretries &#60;number of retries&#62;</color>
+			<p>This determines how often ezQuake should try to retrieve information from a master server until it is considered to be not responding.</p>
+			<p>Default value is "3".</p>
+		<color>sb_mastertimeout &#60;milliseconds until timeout&#62;</color>
+			<p>This determines how long ezQuake will wait for a reply when trying to retrieve information from a master server until the attempt times out.</p>
+			<p>Default value is "1000".</p>
+		<color>sb_maxwidth &#60;width&#62;</color>
+			<p>This set the maximum width for the server browser menu in pixels.</p>
+			<p>Default value is "512".</p>
+		<color>sb_maxheight &#60;height&#62;</color>
+			<p>This set the maximum height for the server browser menu in pixels.</p>
+			<p>Default value is "480".</p>
+		<color>sb_pings &#60;pings per second&#62;</color>
+			<p>This determines how many pings ezQuake will send to a server when trying to determine your ping to it. A higher value will cause scanning servers to take longer, but the result may be more exact. A lower value obviously makes scanning faster, but pings may be inaccurate.</p>
+			<p>Default value is "150".</p>
+		<color>sb_pingspersec &#60;pings per second&#62;</color>
+			<p>This determines how many pings per second ezQuake should sent out when scanning servers. If you set this value too high the result will be that the pings will not be accurate because you overloaded your line. If you set it too low scanning servers will take very long especially when you have a large server list.</p>
+			<p>Default value is "150".</p>
+		<color>sb_pingtimeout &#60;milliseconds until timeout&#62;</color>
+			<p>This determines how long ezQuake will wait for a reply when trying to ping a server until the attempt times out.</p>
+			<p>Default value is "1000".</p>
+		<color>sb_showaddress &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the server IP column in the server list.</p>
+			<p>
+			<pre>
+			0 = do not show the server IP column
+			1 = show the server IP column
+			</pre>
+			Default value is "0".
+			</p>
+		<color>sb_showcounters &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the number of servers or players in the status line.</p>
+			<p>
+			<pre>
+			0 = do not show the server/player counter in the status line
+			1 = show the server/player counter in the status line
+			</pre>
+			Default value is "0".
+			</p>
+		<color>sb_showfraglimit &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the fraglimit column in the server list.</p>
+			<p>
+			<pre>   
+			0 = do not show the fraglimit column
+			1 = show the fraglimit column
+			</pre>
+			Default value is "0".
+			</p>
+		<color>sb_showgamedir &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the gamedir column in the server list, for example to see which mod is being played.</p>
+			<p>
+			<pre>
+			0 = do not show the gamedir column
+			1 = show the gamedir column
+			</pre>
+			Default value is "0".
+			</p>  
+		<color>sb_showmap &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the map column in the server list.</p>
+			<p>
+			<pre>
+			0 = do not show the map column
+			1 = show the map column
+			</pre> 
+			Default value is "0".
+			</p> 
+		<color>sb_showping &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the ping column in the server list.</p>
+			<p>
+			<pre>
+			0 = do not show the ping column
+			1 = show the ping column
+			</pre>  
+			Default value is "0".
+			</p>  
+		<color>sb_showplayers &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the players column in the server list that shows how many players are on the server as well as how many players are allowed.</p>
+			<p>
+			<pre>
+			0 = do not show the players column
+			1 = show the players column
+			</pre>
+			Default value is "1".
+			</p>
+		<color>sb_showtimelimit &#60;0|1&#62;</color>
+			<p>This toggles whether ezQuake should display the timelimit column in the server list.</p>
+			<p>
+			<pre>
+			0 = do not show the timelimit column
+			1 = show the timelimit column
+			</pre>
+			Default value is "0".
+			</p>
+		<color>sb_sortplayers &#60;sort order&#62;</color>
+			<p>This determines sort order in the players list. This uses the numbers from the description of the columns. Check "Columns available in servers/players list" above for an explanation of each number. A "-" in front of the value reverses the sort order for that value from ascending to descending.</p>
+			<p>Default value is "92". This means sort by player name first, then by server address (ip:port).</p>
+		<color>sb_sortservers &#60;sort order&#62;</color>
+			<p>This determines sort order in the servers list. This uses the numbers from the description of the columns. Check "Columns available in servers/players list" above for an explanation of each number. A "-" in front of the value reverses the sort order for that value from ascending to descending.</p>
+			<p>Default value is "32". This means sort by ping to the server first, then by server address (ip:port).</p>
+		<color>sb_sourcevalidity &#60;validity time&#62;</color>
+			<p>This sets the time of master servers validity in minutes. Master servers that were updated within the specified time will not be refreshed when updating sources with [SPACE].</p>
+			<p>Default value is "30".</p>
+		<color>sb_status &#60;0|1&#62;</color>
+			<p>This toggles whether the server status should be displayed in the two bottom lines of the server browser.</p>
+			<p>
+			<pre>
+			0 = do not display the status
+			1 = display the status
+			</pre>  
+			Default value is "1".
+			</p>
+	</body>
+</document>
